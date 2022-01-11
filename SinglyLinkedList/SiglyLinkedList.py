@@ -10,3 +10,6 @@ class SiglyLinkedList:
         while link != None:
             print(link.data)
             link = link.link
+
+    def insertAtHead(self, newData):
+        self.head.link = Node(newData)

@@ -14,7 +14,7 @@ if __name__ == '__main__':
     e2 = Node(2)
 
     # make the list
-    listA.head.link = e1
+    listA.insertAtHead(100)
     e1.link = e2
 
     listA.show()
