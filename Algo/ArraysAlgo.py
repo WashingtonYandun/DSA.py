@@ -63,14 +63,8 @@ def fact_m(num, memory={0: 1, 1: 1, 2: 2}):
     return memory[num]
 
 
-a = fact_m(3000)
-print(a)
-a = str(a)
-print(len(a))
-
-'''
-print(sum_of_two_all([0, 2, 49, 5, 4, 9, 6, 24, 10,
-      12, -12, 3, 20, 13, 15, 16, 17, 103, 146,
-      134, 126, 167, 190, 90, 80, 70, 30, -57, 29,
-      36, 29, 21, 25, 22, 68, -67, 69, 1], 1))
-'''
+if __name__ == "__main__":
+    a = fact_m(3000)
+    print(a)
+    a = str(a)
+    print(len(a))
