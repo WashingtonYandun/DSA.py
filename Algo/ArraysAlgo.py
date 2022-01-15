@@ -1,7 +1,5 @@
-import re
-import sys
-
-sys.setrecursionlimit(50000)
+import time  # messuarte the execution time
+import sys  # for increment the recursion limit
 
 
 def sum_of_two(arr, value):
@@ -34,6 +32,9 @@ def sum_of_two_all(arr, value):
 
 
 def fibo_rc(num):
+    '''
+    recursive fibonacci
+    '''
     if num == 0:
         return 0
     elif num == 1:
@@ -43,6 +44,9 @@ def fibo_rc(num):
 
 
 def fibo_m(num, memory={0: 0, 1: 1, 2: 1, 3: 2}):
+    '''
+    dynamic programming fibonacci
+    '''
     if num in memory:
         return memory[num]
     memory[num] = fibo_m(num - 1) + fibo_m(num - 2)
@@ -50,6 +54,9 @@ def fibo_m(num, memory={0: 0, 1: 1, 2: 1, 3: 2}):
 
 
 def fact_rc(num):
+    '''
+    recursive factorial
+    '''
     if num == 0 or num == 1:
         return 1
     else:
@@ -57,14 +64,10 @@ def fact_rc(num):
 
 
 def fact_m(num, memory={0: 1, 1: 1, 2: 2}):
+    '''
+    dynamic programming factorial
+    '''
     if num in memory:
         return memory[num]
     memory[num] = num*fact_m(num - 1)
     return memory[num]
-
-
-if __name__ == "__main__":
-    a = fact_m(3000)
-    print(a)
-    a = str(a)
-    print(len(a))
