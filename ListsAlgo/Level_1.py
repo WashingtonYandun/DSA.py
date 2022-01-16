@@ -1,4 +1,7 @@
-arr = [15, 2, 4, 8, 9, 5, 10, 23]
+a = [135, 101, 170, 125, 79, 159, 163, 65, 106, 146, 82, 28, 162, 92, 196, 143, 28, 37, 192, 5, 103,
+     154, 93, 183, 22, 117, 119, 96, 48, 127, 172, 139, 70, 113, 68, 100, 36, 95, 104, 12, 123, 134]
+
+
 # trd == traditional
 # ps == python style or using python tricks
 # tle == Time Limit Exceeded
@@ -176,8 +179,9 @@ def sort012(arr):
 
 
 ''' 
-**************** Sort an array of 0s, 1s and 2s ****************
-Given an array of size N containing only 0s, 1s, and 2s; sort the array in ascending order.
+**************** Subarray with given sum ****************
+Given an unsorted array A of size N that contains only non-negative integers,
+find a continuous sub-array which adds to a given number S.
 '''
 
 
@@ -198,4 +202,77 @@ def subArraySum_tle(arr, s):
     return [-1]
 
 
-print(subArraySum_tle(arr, 134))
+def subArraySum(arr, n, s):
+    i = 0
+    cs = arr[0]
+    j = 1
+    while j <= n:
+        # key concept of the algo
+        # this moves the necesary index and rest the unused index
+        while cs > s and i < j-1:
+            cs = cs - arr[i]
+            i = i + 1
+
+        if cs == s:
+            return i + 1, j
+
+        if j < n:
+            cs = cs + arr[j]
+        j = j + 1
+
+    return [-1]
+
+
+''' 
+**************** Move all negative elements to end ****************
+Given an unsorted array arr[] of size N having both negative and positive integers.
+The task is place all negative element at the end of array without changing the order of positive element and negative element.
+'''
+
+# idk whats wrong with this, in my computer it works ggo but no in gg
+
+
+def segregateElements(arr):
+    nArr = []
+    pArr = []
+    for i in arr:
+        if i < 0:
+            nArr.append(i)
+        else:
+            pArr.append(i)
+    arr = pArr + nArr
+    return arr
+
+
+''' 
+**************** Union of two arrays ****************
+Given two arrays a[] and b[] of size n and m respectively.
+The task is to find union between these two arrays.
+Union of the two arrays can be defined as the set containing distinct elements from both the arrays.
+If there are repetitions, then only one occurrence of element should be printed in the union
+'''
+
+
+def doUnion(a, b):
+    '''
+    my first bad aproach, but works
+    '''
+    if len(a) > len(b):
+        for i in b:
+            if i not in a:
+                b.append(i)
+        return len(a)
+    else:
+        for i in a:
+            if i not in b:
+                a.append(i)
+        return len(b)
+
+
+def doUnion_ps(a, b):
+    '''
+    do union using sets
+    '''
+    c = a + b
+    c = set(c)
+    return len(c)
