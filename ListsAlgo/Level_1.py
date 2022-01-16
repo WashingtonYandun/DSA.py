@@ -1,5 +1,7 @@
+arr = [15, 2, 4, 8, 9, 5, 10, 23]
 # trd == traditional
 # ps == python style or using python tricks
+# tle == Time Limit Exceeded
 
 ''' 
 **************** PEAK ELEMENT ****************
@@ -129,5 +131,71 @@ def kthSmallest(arr, k):
     '''
     Order the array and return k-1 value of the sorted array
     '''
-    # need a better solution
+    # need an optimized solution
     return sorted(arr)[k-1]
+
+
+''' 
+**************** Find the Frequency ****************
+Given a vector of N positive integers and an integer X.
+The task is to find the frequency of X in vector.
+'''
+
+
+def findFrequency_ps(arr, x):
+    '''
+    Using python for
+    '''
+    xFrecuency = 0
+    for i in arr:
+        if i == x:
+            xFrecuency = xFrecuency + 1
+    return xFrecuency
+
+
+def findFrequency_trd(arr, x):
+    '''
+    Traditional solution
+    '''
+    xFrecuency = 0
+    for i in range(0, len(arr)):
+        if arr[i] == x:
+            xFrecuency = xFrecuency + 1
+    return xFrecuency
+
+
+''' 
+**************** Sort an array of 0s, 1s and 2s ****************
+Given an array of size N containing only 0s, 1s, and 2s; sort the array in ascending order.
+'''
+
+
+def sort012(arr):
+    arr = arr.sort()
+    return arr
+
+
+''' 
+**************** Sort an array of 0s, 1s and 2s ****************
+Given an array of size N containing only 0s, 1s, and 2s; sort the array in ascending order.
+'''
+
+
+def subArraySum_tle(arr, s):
+    '''
+    Time Limit Exceeded solution
+    '''
+    for i in range(len(arr)):
+        cs = arr[i]
+        j = i + 1
+        for j in range(i+1, len(arr)+1):
+            if cs == s:
+                return [i, j-1]
+
+            if cs > s or j == len(arr):
+                break
+            cs = cs + arr[j]
+    return [-1]
+
+
+print(subArraySum_tle(arr, 134))
