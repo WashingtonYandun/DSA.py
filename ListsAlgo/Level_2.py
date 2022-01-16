@@ -38,3 +38,27 @@ def MissingNumber_mt(arr, n):
     s = n*(n + 1)/2
     cs = sum(arr)
     return int(s - cs)
+
+
+''' 
+**************** Count pairs with given sum ****************
+Given an array of N integers, and an integer K,
+find the number of pairs of elements in the array whose sum is equal to K.
+'''
+
+
+def getPairsCount_tle(arr, k):
+    '''
+    My first solution 
+    '''
+    cont = 0
+    for i in range(0, len(arr)):
+        j = i + 1
+        for j in range(j, len(arr)):
+            if (arr[i] + arr[j] == k):
+                cont = cont + 1
+    return cont
+
+
+arr = [1, 1, 1, 1]
+print(getPairsCount_tle(arr, 2))
