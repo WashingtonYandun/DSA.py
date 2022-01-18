@@ -9,6 +9,9 @@ Given an array, rotate the array by one position in clock-wise direction.
 '''
 
 
+from msilib import sequence
+
+
 def rotate(arr):
     '''
     My first solution
@@ -70,9 +73,36 @@ Implement the partition() and quickSort() functions to sort the array.
 '''
 
 
-def quickSort(self, arr, low, high):
-    return 0
+def quickSort(arr):
+    '''
+    Quick sort, traditional solution and my first
+    '''
+    n = len(arr)
+    if n <= 1:
+        return arr
+
+    pivot = arr[-1]
+    arr.pop()
+
+    lowers = []
+    highers = []
+
+    for i in arr:
+        if i > pivot:
+            highers.append(i)
+        else:
+            lowers.append(i)
+
+    return quickSort(lowers) + [pivot] + quickSort(highers)
 
 
-def partition(self, arr, low, high):
-    return 0
+arr = [2, 1, 6, 10, 4, 1, 3, 9, 7]
+print(quickSort(arr))
+
+
+''' 
+**************** Common elements ****************
+Quick Sort is a Divide and Conquer algorithm.
+Given three arrays sorted in increasing order.
+Find the elements that are common in all three arrays.
+'''
