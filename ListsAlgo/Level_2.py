@@ -60,5 +60,19 @@ def getPairsCount_tle(arr, k):
     return cont
 
 
-arr = [1, 1, 1, 1]
-print(getPairsCount_tle(arr, 2))
+''' 
+**************** Quick Sort ****************
+Quick Sort is a Divide and Conquer algorithm.
+It picks an element as pivot and partitions the given array around the picked pivot.
+Given an array arr[], its starting position low and its ending position high.
+
+Implement the partition() and quickSort() functions to sort the array.
+'''
+
+
+def quickSort(self, arr, low, high):
+    return 0
+
+
+def partition(self, arr, low, high):
+    return 0
