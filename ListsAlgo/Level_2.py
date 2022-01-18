@@ -9,6 +9,9 @@ Given an array, rotate the array by one position in clock-wise direction.
 '''
 
 
+import re
+
+
 def rotate(arr):
     '''
     My first solution
@@ -95,7 +98,6 @@ def quick_sort(arr):
 
 ''' 
 **************** Common elements ****************
-Quick Sort is a Divide and Conquer algorithm.
 Given three arrays sorted in increasing order.
 Find the elements that are common in all three arrays.
 '''
@@ -114,8 +116,32 @@ def common_elements_tle(A, B, C):
     return commons
 
 
-A = [3, 3, 3]
-B = [3, 3, 3]
-C = [3, 3, 3]
+# Return to make this better
+def common_elements_tle2(A, B, C):
+    '''
+    Slow solution
+    '''
+    commons = []
+    for i in A:
+        if (i in A and i in B and i in C and i not in commons):
+            commons.append(i)
+    return commons
 
-print(common_elements_tle(A, B, C))
+
+''' 
+**************** First Repeating Element ****************
+Given an array arr[] of size n, find the first repeating element.
+The element should occurs more than once and the index of its first occurrence should be the smallest.
+'''
+
+
+def first_repeated(arr):
+    for i in range(0, len(arr)):
+        for j in range(i + 1, len(arr)):
+            if arr[i] == arr[j]:
+                return arr[i]
+    return -1
+
+
+arr = [1, 5, 3, 4, 3, 5, 6]
+print(first_repeated(arr))
