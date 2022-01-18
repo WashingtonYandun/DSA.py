@@ -9,9 +9,6 @@ Given an array, rotate the array by one position in clock-wise direction.
 '''
 
 
-from msilib import sequence
-
-
 def rotate(arr):
     '''
     My first solution
@@ -36,7 +33,7 @@ Find the missing element.
 '''
 
 
-def MissingNumber_mt(arr, n):
+def missing_number_mt(arr, n):
     n = len(arr)+1
     s = n*(n + 1)/2
     cs = sum(arr)
@@ -50,7 +47,7 @@ find the number of pairs of elements in the array whose sum is equal to K.
 '''
 
 
-def getPairsCount_tle(arr, k):
+def get_pairs_count_tle(arr, k):
     '''
     My first solution 
     '''
@@ -73,7 +70,7 @@ Implement the partition() and quickSort() functions to sort the array.
 '''
 
 
-def quickSort(arr):
+def quick_sort(arr):
     '''
     Quick sort, traditional solution and my first
     '''
@@ -93,11 +90,7 @@ def quickSort(arr):
         else:
             lowers.append(i)
 
-    return quickSort(lowers) + [pivot] + quickSort(highers)
-
-
-arr = [2, 1, 6, 10, 4, 1, 3, 9, 7]
-print(quickSort(arr))
+    return quick_sort(lowers) + [pivot] + quick_sort(highers)
 
 
 ''' 
@@ -106,3 +99,23 @@ Quick Sort is a Divide and Conquer algorithm.
 Given three arrays sorted in increasing order.
 Find the elements that are common in all three arrays.
 '''
+
+
+def common_elements_tle(A, B, C):
+    '''
+    Slow solution
+    '''
+    commons = set()
+    for i in A:
+        if (i in A and i in B and i in C):
+            commons.add(i)
+    commons = list(commons)
+    commons = sorted(commons)
+    return commons
+
+
+A = [3, 3, 3]
+B = [3, 3, 3]
+C = [3, 3, 3]
+
+print(common_elements_tle(A, B, C))

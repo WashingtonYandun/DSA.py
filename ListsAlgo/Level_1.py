@@ -14,7 +14,7 @@ Note: The generated output will always be 1 if the index that you return is corr
 '''
 
 
-def peakElement_trd(self, arr, n):
+def peak_element_trd(self, arr, n):
     '''
     Solution given on GG practice
     '''
@@ -26,7 +26,7 @@ def peakElement_trd(self, arr, n):
     return None
 
 
-def peakElement_ps(arr):
+def peak_element_ps(arr):
     '''
     my first solution using max() a litle tricky
     '''
@@ -52,7 +52,7 @@ Given an array A of size N of integers. Your task is to find the minimum and max
 '''
 
 
-def getMinMax_trd(arr, n):
+def get_min_max_trd(arr, n):
     '''
     Solution given on GG practice
     '''
@@ -67,7 +67,7 @@ def getMinMax_trd(arr, n):
     return minimun, maximun
 
 
-def getMinMax_ps(arr):
+def get_min_max_ps(arr):
     '''
     My first solution using min() and max() a litle tricky
     '''
@@ -80,7 +80,7 @@ You are given a string s. You need to reverse the string.
 '''
 
 
-def reverseWord_trd(s):
+def reverse_word_trd(s):
     '''
     My "traditional" solution
     '''
@@ -90,7 +90,7 @@ def reverseWord_trd(s):
     return sReversed
 
 
-def reverseWord_ps(s):
+def reverse_word_ps(s):
     '''
     My first solution, python style
     '''
@@ -103,7 +103,7 @@ Given a random set of numbers, Print them in sorted order.
 '''
 
 
-def sortArr(arr):
+def sort_list(arr):
     '''
     bubble sort, limit time Exceeded
     '''
@@ -115,7 +115,7 @@ def sortArr(arr):
     return arr
 
 
-def sortArr(arr):
+def sort_list(arr):
     '''
     Solution given to gg, using sorted()
     '''
@@ -130,7 +130,7 @@ It is given that all array elements are distinct.
 '''
 
 
-def kthSmallest(arr, k):
+def kth_smallest(arr, k):
     '''
     Order the array and return k-1 value of the sorted array
     '''
@@ -145,7 +145,7 @@ The task is to find the frequency of X in vector.
 '''
 
 
-def findFrequency_ps(arr, x):
+def find_frequency_ps(arr, x):
     '''
     Using python for
     '''
@@ -156,7 +156,7 @@ def findFrequency_ps(arr, x):
     return xFrecuency
 
 
-def findFrequency_trd(arr, x):
+def find_frequency_trd(arr, x):
     '''
     Traditional solution
     '''
@@ -185,7 +185,7 @@ find a continuous sub-array which adds to a given number S.
 '''
 
 
-def subArraySum_tle(arr, s):
+def sub_array_sum_tle(arr, s):
     '''
     Time Limit Exceeded solution
     '''
@@ -202,7 +202,7 @@ def subArraySum_tle(arr, s):
     return [-1]
 
 
-def subArraySum(arr, n, s):
+def sub_aray_sum(arr, n, s):
     i = 0
     cs = arr[0]
     j = 1
@@ -232,7 +232,7 @@ The task is place all negative element at the end of array without changing the 
 # idk whats wrong with this, in my computer it works ggo but no in gg
 
 
-def segregateElements(arr):
+def segregate_elements(arr):
     nArr = []
     pArr = []
     for i in arr:
@@ -253,7 +253,7 @@ If there are repetitions, then only one occurrence of element should be printed 
 '''
 
 
-def doUnion(a, b):
+def union(a, b):
     '''
     my first bad aproach, but works
     '''
@@ -269,7 +269,7 @@ def doUnion(a, b):
         return len(b)
 
 
-def doUnion_ps(a, b):
+def union_ps(a, b):
     '''
     do union using sets
     '''
