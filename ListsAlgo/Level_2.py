@@ -3,13 +3,10 @@
 # tle == Time Limit Exceeded
 # mt == math solution
 
-''' 
+'''
 **************** Cyclically rotate an array by one ****************
 Given an array, rotate the array by one position in clock-wise direction.
 '''
-
-
-import re
 
 
 def rotate(arr):
@@ -29,7 +26,7 @@ def rotate_ps(arr):
     return arr
 
 
-''' 
+'''
 **************** Missing number in array ****************
 Given an array of size N-1 such that it only contains distinct integers in the range of 1 to N.
 Find the missing element.
@@ -43,7 +40,7 @@ def missing_number_mt(arr, n):
     return int(s - cs)
 
 
-''' 
+'''
 **************** Count pairs with given sum ****************
 Given an array of N integers, and an integer K,
 find the number of pairs of elements in the array whose sum is equal to K.
@@ -52,7 +49,7 @@ find the number of pairs of elements in the array whose sum is equal to K.
 
 def get_pairs_count_tle(arr, k):
     '''
-    My first solution 
+    My first solution
     '''
     cont = 0
     for i in range(0, len(arr)):
@@ -63,7 +60,7 @@ def get_pairs_count_tle(arr, k):
     return cont
 
 
-''' 
+'''
 **************** Quick Sort ****************
 Quick Sort is a Divide and Conquer algorithm.
 It picks an element as pivot and partitions the given array around the picked pivot.
@@ -96,7 +93,7 @@ def quick_sort(arr):
     return quick_sort(lowers) + [pivot] + quick_sort(highers)
 
 
-''' 
+'''
 **************** Common elements ****************
 Given three arrays sorted in increasing order.
 Find the elements that are common in all three arrays.
@@ -128,7 +125,7 @@ def common_elements_tle2(A, B, C):
     return commons
 
 
-''' 
+'''
 **************** First Repeating Element ****************
 Given an array arr[] of size n, find the first repeating element.
 The element should occurs more than once and the index of its first occurrence should be the smallest.
@@ -143,5 +140,28 @@ def first_repeated(arr):
     return -1
 
 
-arr = [1, 5, 3, 4, 3, 5, 6]
-print(first_repeated(arr))
+'''
+**************** Binary Search ****************
+Given an array arr[] of size n, find the first repeating element.
+The element should occurs more than once and the index of its first occurrence should be the smallest.
+'''
+
+
+def binary_search(arr, value):
+    if value not in arr:
+        return None
+
+    nArr = []
+
+    n = len(arr)
+    pivot = arr[(n//2)]
+
+    if pivot == value:
+        return True
+
+    if value > pivot:
+        nArr = arr[pivot:]
+    else:
+        nArr = arr[0:pivot-1]
+
+    return binary_search(nArr, value)
