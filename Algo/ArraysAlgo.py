@@ -1,11 +1,6 @@
-import math
-import time  # messuarte the execution time
-import sys  # for increment the recursion limit
-
-
 def sum_of_two(arr, value):
     '''
-    In a given list if there is a pair of element that matches the sum given, return true.
+    return a boolean value if exist a pair with the given sum.
     '''
     for i in arr:
         diff = value - i
@@ -16,7 +11,7 @@ def sum_of_two(arr, value):
 
 def sum_of_two_all(arr, value):
     '''
-    Print all the matches of the sum_of_two problem. return true if it exist
+    return a dict of all the matches of pairs with the sum given
     '''
     cont = 0
     pairs = {"Pairs": cont}

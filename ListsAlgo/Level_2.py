@@ -11,7 +11,7 @@ Given an array, rotate the array by one position in clock-wise direction.
 
 def rotate(arr):
     '''
-    My first solution
+    return a rotated array by one position in clock-wise direction.
     '''
     arrN = [arr[-1]]
     arr.pop()
@@ -20,7 +20,7 @@ def rotate(arr):
 
 def rotate_ps(arr):
     '''
-    Using lists
+    return a rotated array by one position in clock-wise direction.
     '''
     arr[:] = arr[-1::] + arr[::-1]
     return arr
@@ -34,6 +34,9 @@ Find the missing element.
 
 
 def missing_number_mt(arr, n):
+    '''
+    return the missing number in a consecutive sequence, unsorted or sorted 
+    '''
     n = len(arr)+1
     s = n*(n + 1)/2
     cs = sum(arr)
@@ -49,7 +52,7 @@ find the number of pairs of elements in the array whose sum is equal to K.
 
 def get_pairs_count_tle(arr, k):
     '''
-    My first solution
+    return the number of pairs whose sum is equal to a given sum (k)
     '''
     cont = 0
     for i in range(0, len(arr)):
@@ -72,7 +75,7 @@ Implement the partition() and quickSort() functions to sort the array.
 
 def quick_sort(arr):
     '''
-    Quick sort, traditional solution and my first
+    return a sorted array using traditional quick sort
     '''
     n = len(arr)
     if n <= 1:
@@ -102,7 +105,7 @@ Find the elements that are common in all three arrays.
 
 def common_elements_tle(A, B, C):
     '''
-    Slow solution
+    return the intersecction of 3 arrays
     '''
     commons = set()
     for i in A:
@@ -116,7 +119,7 @@ def common_elements_tle(A, B, C):
 # Return to make this better
 def common_elements_tle2(A, B, C):
     '''
-    Slow solution
+    return the intersecction of 3 arrays
     '''
     commons = []
     for i in A:
@@ -133,6 +136,9 @@ The element should occurs more than once and the index of its first occurrence s
 
 
 def first_repeated(arr):
+    '''
+    return the first element that is repeated
+    '''
     for i in range(0, len(arr)):
         for j in range(i + 1, len(arr)):
             if arr[i] == arr[j]:
@@ -165,3 +171,9 @@ def binary_search(arr, value):
         nArr = arr[0:pivot-1]
 
     return binary_search(nArr, value)
+
+
+def binary_search(arr, value):
+    i = 0
+
+    return arr[i]

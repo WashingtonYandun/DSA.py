@@ -1,7 +1,3 @@
-a = [135, 101, 170, 125, 79, 159, 163, 65, 106, 146, 82, 28, 162, 92, 196, 143, 28, 37, 192, 5, 103,
-     154, 93, 183, 22, 117, 119, 96, 48, 127, 172, 139, 70, 113, 68, 100, 36, 95, 104, 12, 123, 134]
-
-
 # trd == traditional
 # ps == python style or using python tricks
 # tle == Time Limit Exceeded
@@ -14,9 +10,9 @@ Note: The generated output will always be 1 if the index that you return is corr
 '''
 
 
-def peak_element_trd(self, arr, n):
+def peak_element_trd(arr):
     '''
-    Solution given on GG practice
+    return a peak element from an array
     '''
     arr.append(0)
     for i in range(0, len(arr)-1):
@@ -28,14 +24,15 @@ def peak_element_trd(self, arr, n):
 
 def peak_element_ps(arr):
     '''
-    my first solution using max() a litle tricky
+    return a peak element from an array, using max() (Tricky xd)!
     '''
     return arr.index(max(arr))
 
 
 def peak_all_element(arr):
     '''
-    return a list with all the indexes where exist a peak element in the list given
+    return a list with all the indexes where exist a peak element in the list given,
+    using max() 
     '''
     arr.append(0)
     peaks = []
@@ -52,9 +49,9 @@ Given an array A of size N of integers. Your task is to find the minimum and max
 '''
 
 
-def get_min_max_trd(arr, n):
+def get_min_max_trd(arr):
     '''
-    Solution given on GG practice
+    find and return maximun and minimun elements from an array
     '''
     maximun = 0
     minimun = arr[0]
@@ -69,7 +66,8 @@ def get_min_max_trd(arr, n):
 
 def get_min_max_ps(arr):
     '''
-    My first solution using min() and max() a litle tricky
+    find and return maximun and minimun elements from an array,
+    using min() and max()
     '''
     return min(arr), max(arr)
 
@@ -82,7 +80,7 @@ You are given a string s. You need to reverse the string.
 
 def reverse_word_trd(s):
     '''
-    My "traditional" solution
+    return a reverse string or array
     '''
     sReversed = ""
     for i in range(len(s)-1, -1, -1):
@@ -92,7 +90,7 @@ def reverse_word_trd(s):
 
 def reverse_word_ps(s):
     '''
-    My first solution, python style
+    return a reverse string or array, using "lists"
     '''
     return s[::-1]
 
@@ -103,9 +101,9 @@ Given a random set of numbers, Print them in sorted order.
 '''
 
 
-def sort_list(arr):
+def bubble_sort(arr):
     '''
-    bubble sort, limit time Exceeded
+    return a sorted array using bubble sort
     '''
     for i in range(0, len(arr)):
         for j in range(i+1, len(arr)):
@@ -117,7 +115,7 @@ def sort_list(arr):
 
 def sort_list(arr):
     '''
-    Solution given to gg, using sorted()
+    return a sorted array using sorted()
     '''
     return sorted(arr)
 
@@ -147,7 +145,7 @@ The task is to find the frequency of X in vector.
 
 def find_frequency_ps(arr, x):
     '''
-    Using python for
+    return the number of times x is in the array
     '''
     xFrecuency = 0
     for i in arr:
@@ -158,7 +156,7 @@ def find_frequency_ps(arr, x):
 
 def find_frequency_trd(arr, x):
     '''
-    Traditional solution
+    return the number of times x is in the array
     '''
     xFrecuency = 0
     for i in range(0, len(arr)):
@@ -174,6 +172,9 @@ Given an array of size N containing only 0s, 1s, and 2s; sort the array in ascen
 
 
 def sort012(arr):
+    '''
+    return a sorted array containing 0,1,2 (useless)
+    '''
     arr = arr.sort()
     return arr
 
@@ -187,7 +188,7 @@ find a continuous sub-array which adds to a given number S.
 
 def sub_array_sum_tle(arr, s):
     '''
-    Time Limit Exceeded solution
+    return a subarray with the given sum
     '''
     for i in range(len(arr)):
         cs = arr[i]
@@ -203,6 +204,9 @@ def sub_array_sum_tle(arr, s):
 
 
 def sub_aray_sum(arr, n, s):
+    '''
+    return a subarray with the given sum
+    '''
     i = 0
     cs = arr[0]
     j = 1
@@ -229,10 +233,11 @@ Given an unsorted array arr[] of size N having both negative and positive intege
 The task is place all negative element at the end of array without changing the order of positive element and negative element.
 '''
 
-# idk whats wrong with this, in my computer it works ggo but no in gg
-
 
 def segregate_elements(arr):
+    '''
+    put all the negative elements of the array to the end
+    '''
     nArr = []
     pArr = []
     for i in arr:
@@ -255,7 +260,7 @@ If there are repetitions, then only one occurrence of element should be printed 
 
 def union(a, b):
     '''
-    my first bad aproach, but works
+    return the lenght of the union of two arrays
     '''
     if len(a) > len(b):
         for i in b:
@@ -271,7 +276,7 @@ def union(a, b):
 
 def union_ps(a, b):
     '''
-    do union using sets
+    return the lenght of the union of two arrays using sets set()
     '''
     c = a + b
     c = set(c)
