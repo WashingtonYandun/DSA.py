@@ -1,3 +1,10 @@
+import math
+import os
+import random
+import re
+import sys
+
+
 def sum_of_two(arr, value):
     '''
     return a boolean value if exist a pair with the given sum.
@@ -67,3 +74,37 @@ def fact_m(num, memory={0: 1, 1: 1, 2: 2}):
         return memory[num]
     memory[num] = num*fact_m(num - 1)
     return memory[num]
+
+
+def is_odd(n):
+    '''
+    verify if anumber is odd or not
+    '''
+    flag = True
+    cont = 0
+    for i in range(1, n+1):
+        if n % i == 0:
+            cont = cont + 1
+            if cont > 2:
+                return False
+    return flag
+
+
+def is_even(n):
+    '''
+    verify if anumber is odd or not
+    '''
+    if n % 2 == 0:
+        return True
+    return False
+
+
+def partition(arr, k):
+    '''
+    return an array of sub arrays in a defined lenght
+    '''
+    subs = []
+    for i in range(0, len(arr), k):
+        s = [arr[i:i + k]]
+        subs.append(s)
+    return subs
