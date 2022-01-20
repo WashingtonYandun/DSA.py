@@ -92,7 +92,7 @@ def is_odd(n):
 
 def is_even(n):
     '''
-    verify if anumber is odd or not
+    verify if anumber is even or not
     '''
     if n % 2 == 0:
         return True
