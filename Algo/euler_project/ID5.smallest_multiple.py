@@ -7,9 +7,6 @@ What is the smallest positive number that is evenly divisible by all of the numb
 '''
 
 
-import re
-
-
 def is_divisible_to(num, div):
     multipleFlag = True
     for i in range(1, div + 1, 1):
