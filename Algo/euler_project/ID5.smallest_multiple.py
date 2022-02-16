@@ -10,9 +10,9 @@ What is the smallest positive number that is evenly divisible by all of the numb
 import re
 
 
-def is_divisible_to(num):
+def is_divisible_to(num, div):
     multipleFlag = True
-    for i in range(1, 20 + 1, 1):
+    for i in range(1, div + 1, 1):
         if num % i != 0:
             multipleFlag = False
             return multipleFlag
@@ -22,7 +22,7 @@ def is_divisible_to(num):
 def smallest_multiple():
     i = 20
     while(True):
-        if is_divisible_to(i):
+        if is_divisible_to(i, 20):
             break
         i = i + 20
     return i
