@@ -50,4 +50,4 @@ def largest_product_in_a_series(arr, digits):
 
 arr = str_to_numlist(rawSerie)
 
-print(largest_product_in_a_series(arr, 13))
+print(largest_product_in_a_series(arr, 13))  # 23514624000
