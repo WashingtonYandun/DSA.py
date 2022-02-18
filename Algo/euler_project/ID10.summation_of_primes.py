@@ -7,24 +7,27 @@ Find the sum of all the primes below two million.
 '''
 
 
-def is_prime(num):
+import math
+
+
+def is_prime_improved(num):
     primeFlag = True
-    count = 0
-    for i in range(1, num + 1, 1):
-        if num % i == 0:
-            count = count + 1
-            if count > 2:
+    if num > 2 and num % 2 == 0:
+        return False
+    else:
+        for i in range(3, int(math.sqrt(num)) + 1, 2):
+            if num % i == 0:
                 primeFlag = False
                 return primeFlag
     return primeFlag
 
 
-def st_prime(target):
-    totalSum = 2
-    for i in range(3, target + 1, 2):
-        if is_prime(i):
+def summation_of_primes(target):
+    totalSum = 0
+    for i in range(2, target + 1, 1):
+        if is_prime_improved(i):
             totalSum = totalSum + i
     return totalSum
 
 
-print(st_prime(2000000))
+print(summation_of_primes(2000000))  # 142913828922
