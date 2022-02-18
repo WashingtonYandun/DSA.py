@@ -13,9 +13,9 @@ Find the product abc.
 
 def pythagorean_triplet(target):
     tripletArr = []
-    for a in range(1, 1000, 1):
-        # this implicates that b is bigger than a
-        for b in range(a + 1, 1000):
+    for a in range(1, target, 1):
+        # this implicates that b is bigger than a: b = a + 1
+        for b in range(a + 1, target):
             c = target - a - b
             if a**2 + b**2 == c**2:
                 tripletArr.append(["a", a])
@@ -23,7 +23,10 @@ def pythagorean_triplet(target):
                 tripletArr.append(["c", c])
                 # only for view the triplet
                 print(tripletArr)
-    return tripletArr[0][1]*tripletArr[1][1]*tripletArr[2][1]
+                return tripletArr[0][1]*tripletArr[1][1]*tripletArr[2][1]
+    return tripletArr
 
 
 print(pythagorean_triplet(1000))  # 31875000
+# print(pythagorean_triplet(12))  # 60
+# print(pythagorean_triplet(100))  # []
