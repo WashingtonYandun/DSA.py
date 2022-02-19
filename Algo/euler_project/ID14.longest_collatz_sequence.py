@@ -68,4 +68,4 @@ def longest_collatz_sequence(r):
     return [currentNum, currentMax]
 
 
-print(longest_collatz_sequence(1_000_000))
+print(longest_collatz_sequence(1_000_000))  # [837799, 524]
