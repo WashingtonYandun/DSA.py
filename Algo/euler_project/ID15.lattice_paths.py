@@ -7,6 +7,7 @@ How many such routes are there through a 20×20 grid?
 
 
 def fact(num):
+    # TODO: need improve factorial function
     if num == 0 or num == 1:
         return 1
     else:
