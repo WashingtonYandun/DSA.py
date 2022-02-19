@@ -70,6 +70,7 @@ def largest_product_in_a_grid(A, n):
     target = 0  # this will be return
     for i in range(rows):
         for j in range(cols - n + 1):  # 1 added for 0 in arrays
+            # TODO:this is made only for 4 (need improve)
             currentProdHV = max(
                 A[i][j] * A[i][j+1] * A[i][j+2] *
                 A[i][j+3],  # check Horizontal
@@ -80,6 +81,7 @@ def largest_product_in_a_grid(A, n):
             target = max(currentProdHV, target)
 
             if i < rows - n + 1:
+                # TODO:this is made only for 4 (need improve)
                 currentProdDia = max(
                     A[i][j] * A[i+1][j+1] * A[i+2][j+2] *
                     A[i+3][j+3],  # principal Diagonal
