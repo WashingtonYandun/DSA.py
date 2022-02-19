@@ -19,4 +19,4 @@ def lattice_paths(gridDim):
     return int(numPaths)
 
 
-print(lattice_paths(20))
+print(lattice_paths(20))  # 137846528820
