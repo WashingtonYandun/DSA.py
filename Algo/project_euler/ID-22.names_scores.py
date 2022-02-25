@@ -9,7 +9,10 @@ What is the total of all the name scores in the file?
 '''
 
 '''
-initial idea
+########################
+INITIAL IDEAS
+########################
+
 total = 0
 for i in range(0, len(names), 1):
     for j in names[i]:
@@ -17,10 +20,9 @@ for i in range(0, len(names), 1):
 
 print(total)  # 324536 -> NO 
 # 871198282
-'''
 
 
-# Maybe this could be solved by using ascii
+# found the way to use ascii (no more necessary this dict)
 abc = {
     "A": 1,
     "B": 2,
@@ -49,13 +51,13 @@ abc = {
     "Y": 25,
     "Z": 26,
 }
+'''
 
 
 def from_txt_to_list(p):
     with open(p) as fl:
         names = fl.read()
-    # names = names.strip().split('\',\'') -> no useful
-    names = names.strip().split(',')
+    names = names.strip().split(',') # names = names.strip().split('\',\'') -> no useful
     names = [x[1:-1] for x in names]  # delete ' '
     names.sort()  # important
     return names
@@ -65,7 +67,7 @@ def names_scores(arr):
     total = 0
     for i in range(0, len(arr), 1):
         for j in arr[i]:
-            total = total + abc[j]*(i+1)
+            total = total + (ord(j)-64)*(i+1)
     return total
 
 
