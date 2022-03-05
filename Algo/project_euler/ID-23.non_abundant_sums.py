@@ -19,41 +19,25 @@ def divisors_sum(num):
     return count
 
 
-def num_type(num):
-    sumD = divisors_sum(num)
-    if sumD > num:
-        return 1
-    elif sumD == num:
-        return 0
-    else:
-        pass
+def get_abundants(limit):
+    abundants = [i for i in range(12, limit + 1, 1) if divisors_sum(i) > i]
+    return abundants
 
 
-def non_abundant_sums():
-    limit = 28123
-    total = 0
-    perfects = []
-    abundants = []
-
-    for i in range(0, limit + 1):
-        if num_type(i) == 1:
-            abundants.append(i)
-        elif num_type(i) == 0:
-            perfects.append(i)
-
-    for i in range(1, len(abundants)):
-        for j in range(1, len(abundants)):
-            current = abundants[i] + abundants[j]
-            if current in perfects:
-                total = total + current
-            elif num_type(current) == 0:
-                total = total + current
-            else:
+def non_abundant_sums(limit):
+    totalSum = 0
+    abundants = get_abundants(limit)
+    for j in range(0, len(abundants)):
+        for k in range(0, len(abundants)):
+            if j == abundants[j] + abundants[k]:
                 pass
-    return total
+            else:
+                totalSum = totalSum + j
+                print(j)
+    return totalSum
 
 
-print(non_abundant_sums())
+print(non_abundant_sums(28123))
 
 
 '''
