@@ -19,13 +19,41 @@ def divisors_sum(num):
     return count
 
 
-def is_perfect_number(num):
-    if num == divisors_sum(num):
-        return True
-    return False
+def num_type(num):
+    sumD = divisors_sum(num)
+    if sumD > num:
+        return 1
+    elif sumD == num:
+        return 0
+    else:
+        pass
 
 
-print(is_perfect_number(28))
+def non_abundant_sums():
+    limit = 28123
+    total = 0
+    perfects = []
+    abundants = []
+
+    for i in range(0, limit + 1):
+        if num_type(i) == 1:
+            abundants.append(i)
+        elif num_type(i) == 0:
+            perfects.append(i)
+
+    for i in range(1, len(abundants)):
+        for j in range(1, len(abundants)):
+            current = abundants[i] + abundants[j]
+            if current in perfects:
+                total = total + current
+            elif num_type(current) == 0:
+                total = total + current
+            else:
+                pass
+    return total
+
+
+print(non_abundant_sums())
 
 
 '''
