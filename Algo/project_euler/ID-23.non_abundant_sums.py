@@ -28,16 +28,18 @@ def get_abundants(limit):
 
 
 def non_abundant_sums(limit):
-    totalSum = 0
+    totalSum = []
     abundants = get_abundants(limit)
     for j in range(0, len(abundants)):
         for k in range(j + 1, len(abundants)):
             if j == abundants[j] + abundants[k]:
                 pass
             else:
-                totalSum = totalSum + j
-                break
-    return totalSum
+                if j not in totalSum:
+                    totalSum.append(j)
+    print(abundants)
+    print(totalSum)
+    return sum(totalSum)
 
 
 print(non_abundant_sums(28123))
