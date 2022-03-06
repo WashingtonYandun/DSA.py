@@ -11,6 +11,9 @@ Find the sum of all the positive integers which cannot be written as the sum of 
 '''
 
 
+from ast import Break
+
+
 def divisors_sum(num):
     count = 0
     for i in range(1, num, 1):
@@ -28,18 +31,13 @@ def non_abundant_sums(limit):
     totalSum = 0
     abundants = get_abundants(limit)
     for j in range(0, len(abundants)):
-        for k in range(0, len(abundants)):
+        for k in range(j + 1, len(abundants)):
             if j == abundants[j] + abundants[k]:
                 pass
             else:
                 totalSum = totalSum + j
-                print(j)
+                break
     return totalSum
 
 
 print(non_abundant_sums(28123))
-
-
-'''
-TODO: SOLVE THIS
-'''
