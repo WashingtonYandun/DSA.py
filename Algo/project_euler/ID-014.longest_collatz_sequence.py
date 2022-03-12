@@ -44,16 +44,13 @@ print(collatz(9), memory)
 
 
 def collatz_sq(num):
-    count = 0
-    while num > 1:
-        if num == 1:
-            return count
+    count = 1
+    while num != 1:
         if num % 2 == 0:
             num = num // 2
-            count = count + 1
         else:
-            count = count + 1
-            num = (3 * num) + 1
+            num = 3*num + 1
+        count += 1
     return count
 
 
@@ -68,4 +65,4 @@ def longest_collatz_sequence(r):
     return [currentNum, currentMax]
 
 
-print(longest_collatz_sequence(1_000_000))  # [837799, 524]
+print(longest_collatz_sequence(1_000_000))  # [837799, 525]
