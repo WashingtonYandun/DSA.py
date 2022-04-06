@@ -1,6 +1,5 @@
-from SinglyLinkedList.Node import Node
-from SinglyLinkedList.SiglyLinkedList import SiglyLinkedList
-
+from SLL.SiglyLinkedList import SiglyLinkedList
+from SLL.SiglyLinkedList import Node
 
 if __name__ == '__main__':
     # declare the link list
@@ -16,5 +15,6 @@ if __name__ == '__main__':
     # make the list
     listA.insertAtHead(100)
     e1.link = e2
+    print(listA.len())
 
     listA.show()
