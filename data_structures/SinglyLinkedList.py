@@ -65,6 +65,66 @@ class SinglyLinkedList:
         newNode.next = aux.next
         aux.next = newNode
 
+    def delete_end(self):
+        aux = self.head
+        while aux.next.next != None:
+            aux = aux.next
+        del aux.next
+        aux.next = None
+        pass
+
+    def delete_at(self, nth):
+        aux = self.head
+        if nth > self.lenght() or nth < 0:
+            print("Invalid Position")
+            return
+
+        if nth == 0:
+            del self.head
+            aux.next = self.head
+            return
+
+        if nth == self.lenght():
+            self.delete_end()
+            return
+
+        for i in range(0, nth - 1, 1):
+            aux = aux.next
+
+        temp = aux.next
+        del aux.next
+        aux.next = temp.next
+
+        return
+
+    def peek(self):
+        aux = self.head
+        while aux.next != None:
+            aux = aux.next
+        return aux.data
+
+    def reverse_i(self):
+        current = self.head
+        prev = None
+
+        while current != None:
+            prox = current.next
+            current.next = prev
+            prev = current
+            current = prox
+
+        self.head = prev
+
+    def reverse_r(self, current):
+        # TODO: solve recursive reverse method
+        if current.next == None:
+            self.head = current
+            return
+        return self.reverse_r(current.next)
+
+    def reverse_print(self):
+        pass
+
     def show(self):
         if self.head == None:
             print("Head is None, no more elements")
