@@ -1,20 +1,8 @@
-from SLL.SiglyLinkedList import SiglyLinkedList
-from SLL.SiglyLinkedList import Node
+from data_structures.SinglyLinkedList import SinglyLinkedList
 
-if __name__ == '__main__':
-    # declare the link list
-    listA = SiglyLinkedList()
 
-    # declare the head of the list
-    listA.head = Node(0)
+ll = SinglyLinkedList()
+ll.show()
+print("")
 
-    # declare the elements of the list
-    e1 = Node(1)
-    e2 = Node(2)
-
-    # make the list
-    listA.insertAtHead(100)
-    e1.link = e2
-    print(listA.len())
-
-    listA.show()
+print(ll.lenght())
