@@ -1,5 +1,5 @@
 class Stack_List:
-    stk = []
+    stk = None
 
     def __init__(self):
         self.stk = []
@@ -26,3 +26,8 @@ class Stack_List:
             if self.stk[i] == data:
                 return i
         return -1
+
+    def show(self):
+        for i in range(0, self.stk.size(), 1):
+            print(self.stk[i])
+        return

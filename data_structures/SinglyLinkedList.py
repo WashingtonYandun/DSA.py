@@ -94,7 +94,6 @@ class SinglyLinkedList:
         temp = aux.next
         del aux.next
         aux.next = temp.next
-
         return
 
     def peek(self):
