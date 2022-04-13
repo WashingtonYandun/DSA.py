@@ -32,10 +32,8 @@ class Stack_SLL:
         self.stk.show()
         return
 
-    '''
     def search(self, data):
         for i in range(0, self.size(), 1):
             if self.stk[i] == data:
                 return i
         return -1
-    '''

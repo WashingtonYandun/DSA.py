@@ -13,13 +13,11 @@ class SinglyLinkedList:
         if self.head == None:
             print("Just the head")
             return 1
-
         aux = self.head
         l = 0
         while aux != None:
             l += 1
             aux = aux.next
-
         return l
 
     def push(self, newData):
@@ -27,24 +25,18 @@ class SinglyLinkedList:
         if self.head == None:
             self.head = newNode
             return
-
         aux = self.head
         while aux.next != None:
             aux = aux.next
-
         aux.next = newNode
 
-    '''
     def change_head(self, newData):
         temp = self.head
         newNode = SLL_Node(newData)
         newNode.next = temp.next
-
         del self.head
-
         self.head = newNode
         pass
-    '''
 
     def insert_at(self, newData, nth):
         if nth > self.lenght() or nth < 0:
@@ -58,10 +50,8 @@ class SinglyLinkedList:
             newNode.next = aux
             self.head = newNode
             return
-
         for i in range(0, nth - 1, 1):
             aux = aux.next
-
         newNode.next = aux.next
         aux.next = newNode
 
@@ -78,19 +68,15 @@ class SinglyLinkedList:
         if nth > self.lenght() or nth < 0:
             print("Invalid Position")
             return
-
         if nth == 0:
             del self.head
             aux.next = self.head
             return
-
         if nth == self.lenght():
             self.delete_end()
             return
-
         for i in range(0, nth - 1, 1):
             aux = aux.next
-
         temp = aux.next
         del aux.next
         aux.next = temp.next
@@ -105,13 +91,11 @@ class SinglyLinkedList:
     def reverse_i(self):
         current = self.head
         prev = None
-
         while current != None:
             prox = current.next
             current.next = prev
             prev = current
             current = prox
-
         self.head = prev
 
     def reverse_r(self, current):
