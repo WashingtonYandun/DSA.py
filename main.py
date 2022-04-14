@@ -1,16 +1,17 @@
+from data_structures.DoublyLinkedList import DoublyLinkedList
 from data_structures.SinglyLinkedList import SinglyLinkedList
 
 
 ll = SinglyLinkedList()
+dll = DoublyLinkedList()
 
-for i in range(0, 10, 1):
-    ll.push(i)
+for i in range(10, 21, 1):
+    dll.push(i)
 
-ll.show()
-print("")
-
-ll.reverse_r(ll.head)
-ll.show()
+dll.show()
 print()
-
-print(ll.lenght())
+dll.reverse_i()
+dll.reverse_show(dll.head)
+dll.reverse_r()
+print()
+dll.show()

@@ -31,6 +31,7 @@ class SinglyLinkedList:
         while aux.next != None:
             aux = aux.next
         aux.next = newNode
+        pass
 
     def change_head(self, newData):
         temp = self.head
@@ -56,6 +57,7 @@ class SinglyLinkedList:
             aux = aux.next
         newNode.next = aux.next
         aux.next = newNode
+        pass
 
     def delete_end(self):
         aux = self.head
@@ -83,7 +85,7 @@ class SinglyLinkedList:
         temp = aux.next
         del aux.next
         aux.next = temp.next
-        return
+        pass
 
     def peek(self):
         aux = self.head
@@ -100,6 +102,7 @@ class SinglyLinkedList:
             prev = current
             current = prox
         self.head = prev
+        pass
 
     def reverse_r(self, current):
         # TODO: solve recursive reverse method
@@ -108,8 +111,11 @@ class SinglyLinkedList:
             return
         return self.reverse_r(current.next)
 
-    def reverse_print(self):
-        pass
+    def reverse_show(self, aux):
+        if(aux.next != None):
+            print(aux.data)
+            self.reverse_print(aux.next)
+        return
 
     def show(self):
         if self.head == None:
@@ -121,3 +127,4 @@ class SinglyLinkedList:
         while aux != None:
             print(aux.data)
             aux = aux.next
+        pass
