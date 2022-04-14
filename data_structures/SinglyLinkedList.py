@@ -6,6 +6,8 @@ class SLL_Node:
 
 class SinglyLinkedList:
 
+    head = None
+
     def __init__(self, head=None):
         self.head = None
 
@@ -59,9 +61,10 @@ class SinglyLinkedList:
         aux = self.head
         while aux.next.next != None:
             aux = aux.next
+        temp = aux.next.data
         del aux.next
         aux.next = None
-        pass
+        return temp
 
     def delete_at(self, nth):
         aux = self.head

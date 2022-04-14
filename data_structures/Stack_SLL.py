@@ -6,6 +6,7 @@ class Stack_SLL:
 
     def __init__(self):
         self.stk = SinglyLinkedList()
+        pass
 
     def push(self, data):
         self.stk.insert_at(data, self.size())
