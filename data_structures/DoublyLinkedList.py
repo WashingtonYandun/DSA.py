@@ -21,6 +21,7 @@ class DoublyLinkedList:
         return l
 
     def push(self, newData):
+        prev = None
         newNode = DLL_Node(newData)
         if self.head == None:
             self.head = newNode
@@ -29,16 +30,44 @@ class DoublyLinkedList:
         aux = self.head
 
         while aux.next != None:
+            aux.prev = prev
+            prev = aux
             aux = aux.next
 
-        newNode.prev = aux.next
+        aux.prev = prev
+        newNode.prev = aux
         aux.next = newNode
         newNode.next = None
+        pass
 
     def change_head(self, newData):
         pass
 
     def insert_at(self, newData, nth):
+        newNode = DLL_Node(newData)
+        aux = self.head
+
+        if nth >= self.lenght() or nth < 0:
+            print("Invalid Position")
+            return
+
+        if nth == 0:
+            self.head.prev = newNode
+            newNode.next = self.head
+            self.head = newNode
+            return
+
+        if nth == self.lenght() - 1:
+            self.push(newData)
+            return
+
+        for i in range(0, nth - 1, 1):
+            aux = aux.next
+
+        aux.next.prev = newNode
+        newNode.next = aux.next
+        aux.next = newNode
+        newNode.prev = aux
         pass
 
     def delete_end(self):
