@@ -1,5 +1,7 @@
 # pycache
 SinglyLinkedList/__pycache__/
 
-# vs code dev
+# dev
 .vscode/
+/venv/
+.idea/

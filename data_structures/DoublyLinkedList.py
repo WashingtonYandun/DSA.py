@@ -11,7 +11,7 @@ class DoublyLinkedList:
     def __init__(self, head=None):
         self.head = head
 
-    def lenght(self):
+    def length(self):
         aux = self.head
         l = 0
         while aux.next is not None:
@@ -46,7 +46,7 @@ class DoublyLinkedList:
         new_node = DLL_Node(new_data)
         aux = self.head
 
-        if nth >= self.lenght() or nth < 0:
+        if nth >= self.length() or nth < 0:
             print("Invalid Position")
             return
 
@@ -56,7 +56,7 @@ class DoublyLinkedList:
             self.head = new_node
             return
 
-        if nth == self.lenght() - 1:
+        if nth == self.length() - 1:
             self.push(new_data)
             return
 

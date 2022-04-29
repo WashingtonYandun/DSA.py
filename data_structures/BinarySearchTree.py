@@ -1,4 +1,4 @@
-class BST_Node:
+class BstNode:
 
     data = 0
     left = None
@@ -15,4 +15,4 @@ class BinarySearchTree:
     root = None
 
     def __init__(self, data):
-        self.root = BST_Node(data)
+        self.root = BstNode(data)

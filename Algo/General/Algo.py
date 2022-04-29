@@ -101,7 +101,7 @@ def is_even(n):
 
 def partition(arr, k):
     '''
-    return an array of sub arrays in a defined lenght
+    return an array of sub arrays in a defined lengths
     '''
     subs = []
     for i in range(0, len(arr), k):

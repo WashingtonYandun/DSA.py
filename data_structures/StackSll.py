@@ -1,7 +1,7 @@
 from data_structures.SinglyLinkedList import SinglyLinkedList
 
 
-class Stack_SLL:
+class StackSll:
     stk = None
 
     def __init__(self):
@@ -20,10 +20,10 @@ class Stack_SLL:
         return self.stk.peek()
 
     def size(self):
-        return self.stk.lenght()
+        return self.stk.length()
 
     def empty(self):
-        if self.stk.lenght() == 0:
+        if self.stk.length() == 0:
             return True
         if self.stk is None:
             return False

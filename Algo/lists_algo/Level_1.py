@@ -266,7 +266,7 @@ If there are repetitions, then only one occurrence of element should be printed 
 
 def union(a, b):
     '''
-    return the lenght of the union of two arrays
+    return the lengths of the union of two arrays
     '''
     if len(a) > len(b):
         for i in b:
@@ -282,7 +282,7 @@ def union(a, b):
 
 def union_ps(a, b):
     '''
-    return the lenght of the union of two arrays using sets set()
+    return the lengths of the union of two arrays using sets set()
     '''
     c = a + b
     c = set(c)
