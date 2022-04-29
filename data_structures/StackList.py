@@ -1,4 +1,4 @@
-class Stack_List:
+class StackList:
     stk = None
 
     def __init__(self):
@@ -17,7 +17,7 @@ class Stack_List:
         return len(self.stk)
 
     def empty(self):
-        if self.stk == []:
+        if not self.stk:
             return True
         return False
 

@@ -1,4 +1,5 @@
-class Stack_List:
+# TODO: CORRECT THIS CLASS
+class StackList:
     stk = None
 
     def __init__(self):

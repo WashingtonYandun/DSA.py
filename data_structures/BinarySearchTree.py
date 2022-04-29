@@ -11,6 +11,7 @@ class BST_Node:
 
 
 class BinarySearchTree:
+
     root = None
 
     def __init__(self, data):

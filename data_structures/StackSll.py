@@ -25,7 +25,7 @@ class Stack_SLL:
     def empty(self):
         if self.stk.lenght() == 0:
             return True
-        if self.stk == None:
+        if self.stk is None:
             return False
         return False
 

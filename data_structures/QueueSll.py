@@ -1,15 +1,15 @@
 from data_structures.SinglyLinkedList import SinglyLinkedList
 
 
-class Queue_SLL:
+class QueueSll:
     queue = None
 
     def __init__(self):
         self.queue = SinglyLinkedList()
         pass
 
-    def add(self, newData):
-        self.queue.push(newData)
+    def add(self, new_data):
+        self.queue.push(new_data)
         pass
 
     def peek(self):
