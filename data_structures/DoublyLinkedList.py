@@ -21,7 +21,7 @@ class DoublyLinkedList:
 
     def push(self, new_data):
         prev = None
-        new_node = DLL_Node(new_data)
+        new_node = DllNode(new_data)
         if self.head is None:
             self.head = new_node
             return
@@ -43,7 +43,7 @@ class DoublyLinkedList:
         pass
 
     def insert_at(self, new_data, nth):
-        new_node = DLL_Node(new_data)
+        new_node = DllNode(new_data)
         aux = self.head
 
         if nth >= self.length() or nth < 0:

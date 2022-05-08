@@ -16,3 +16,6 @@ class BinarySearchTree:
 
     def __init__(self, data):
         self.root = BstNode(data)
+
+    def insert(self):
+        pass
