@@ -11,6 +11,14 @@ import math
 
 
 def is_prime(num):
+    #must be improved
+    """
+    Takes a number as an argument and returns True if the number is prime and
+    False if the number is not prime
+    
+    :param num: the number to be checked
+    :return: the value of the variable primeFlag.
+    """
     primeFlag = True
     count = 0
     for i in range(1, num + 1, 1):
@@ -23,6 +31,12 @@ def is_prime(num):
 
 
 def get_factors(num):
+    """
+    It takes a number and returns a list of all the factors of that number
+    
+    :param num: The number to find the factors of
+    :return: A list of factors of the number.
+    """
     factors = []
     for i in range(1, int(math.sqrt(num)) + 2):
         if num % i == 0:
@@ -31,6 +45,13 @@ def get_factors(num):
 
 
 def largest_prime_factor(num):
+    """
+    It gets all the factors of the number, then checks if each factor is prime, and if it is, it checks
+    if it's the largest prime factor so far
+    
+    :param num: The number to find the largest prime factor of
+    :return: The largest prime factor of the number 600851475143
+    """
     factors = get_factors(num)
     currentMax = 0
     for i in factors:

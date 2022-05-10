@@ -44,6 +44,13 @@ print(collatz(9), memory)
 
 
 def collatz_sq(num):
+    """
+    If the number is even, divide it by 2. If the number is odd, multiply it by 3 and add 1. Repeat
+    until the number is 1
+    
+    :param num: the number to be tested
+    :return: The number of steps it takes to reach 1.
+    """
     count = 1
     while num != 1:
         if num % 2 == 0:
@@ -55,6 +62,13 @@ def collatz_sq(num):
 
 
 def longest_collatz_sequence(r):
+    """
+    It starts at the top of the range and counts down, checking each number to see if it has the longest
+    Collatz sequence
+    
+    :param r: the range of numbers to check
+    :return: The number and the length of the longest Collatz sequence
+    """
     currentMax = 1
     currentNum = 1
     for i in range(r, 1, -1):

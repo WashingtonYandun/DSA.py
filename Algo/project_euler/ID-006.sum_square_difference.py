@@ -12,6 +12,14 @@ Find the difference between the sum of the squares of the first one hundred natu
 
 
 def sum_square_difference(num):
+    """
+    It calculates the sum of the squares of the first n natural numbers, and then subtracts the square
+    of the sum of the first n natural numbers
+    
+    :param num: the number you want to find the sum square difference of
+    :return: The difference between the sum of the squares of the first n natural numbers and the square
+    of the sum.
+    """
     y = ((num * (num + 1))/2)**2
     x = 0
     for i in range(1, num + 1, 1):

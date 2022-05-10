@@ -65,6 +65,15 @@ A = [
 
 
 def largest_product_in_a_grid(A, n):
+    """
+    It iterates over the rows and columns of the grid, and for each position, it checks the horizontal,
+    vertical, and diagonal products, and returns the largest of those products
+    
+    :param A: The grid of numbers
+    :param n: the number of adjacent numbers to multiply
+    :return: The largest product of n adjacent numbers in the same direction (up, down, left, right, or
+    diagonally) in the 20×20 grid.
+    """
     rows = len(A)
     cols = len(A[n])  # all the rows has the same len() value
     target = 0  # this will be return

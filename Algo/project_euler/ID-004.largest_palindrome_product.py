@@ -15,6 +15,13 @@ This is not an optimal solution
 
 
 def is_palindrome(num):
+    """
+    If the string representation of the number is the same as the string representation of the number
+    reversed, then the number is a palindrome
+    
+    :param num: the number to be checked
+    :return: a boolean value.
+    """
     palindromeFlag = False
     strNum = str(num)
     if strNum == strNum[::-1]:
@@ -24,6 +31,12 @@ def is_palindrome(num):
 
 
 def largest_palindrome_product(num):
+    """
+    Check the largets palindrome product from the bigger to the shorter
+    
+    :param num: the number of digits in the product
+    :return: The largest palindrome product of two 3-digit numbers.
+    """
     maxLimit = 10 ** num - 1  # 3 - 999
     minLimit = maxLimit//10 + 1  # 999 - 100
 

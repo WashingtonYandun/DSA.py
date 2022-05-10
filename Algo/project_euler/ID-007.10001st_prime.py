@@ -9,6 +9,13 @@ What is the 10 001st prime number?
 
 
 def is_prime(num):
+    """
+    The function is_prime() takes a number as an argument and returns True if the number is prime and
+    False if the number is not prime
+    
+    :param num: the number to be checked
+    :return: the value of the variable primeFlag.
+    """
     primeFlag = True
     count = 0
     for i in range(1, num + 1, 1):
@@ -21,6 +28,12 @@ def is_prime(num):
 
 
 def st_prime(location):
+    """
+    It takes a number, and returns the nth prime number
+    
+    :param location: the nth prime number you want to find
+    :return: The nth prime number
+    """
     n = 13
     i = 5
     while(True):

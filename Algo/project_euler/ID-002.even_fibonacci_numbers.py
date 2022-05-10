@@ -22,6 +22,13 @@ memory = {0: 0, 1: 1, 2: 2}
 
 
 def fibo(num):
+    """
+    If the number is in the memory, return the value from the memory, otherwise, calculate the value and
+    store it in the memory
+
+    :param num: The number of the Fibonacci sequence you want to find
+    :return: The value of the fibonacci number at the given index.
+    """
     if num in memory:
         return memory[num]
     memory[num] = fibo(num - 1) + fibo(num - 2)
@@ -29,6 +36,12 @@ def fibo(num):
 
 
 def sum_even(memory):
+    """
+    It takes a dictionary as an argument and returns the sum of all the even numbers in the dictionary
+
+    :param memory: a dictionary of integers
+    :return: The sum of all the even numbers in the list.
+    """
     totalSum = 0
     for pos in memory:
         currentNum = memory.get(pos)
@@ -38,6 +51,13 @@ def sum_even(memory):
 
 
 def even_fibo(num, memory):
+    """
+    It takes a number and a memory, and returns the sum of the even fibonacci numbers up to the number
+    
+    :param num: the number of fibonacci numbers to generate
+    :param memory: a list of all the fibonacci numbers up to the number given
+    :return: The sum of all even numbers in the fibonacci sequence up to the number given.
+    """
     fibo(num)
     evenFiboSum = sum_even(memory)
     return evenFiboSum
@@ -53,6 +73,13 @@ My Second try
 
 
 def sum_even_fibo(num):
+    """
+    It takes a number as input and returns the sum of all even fibonacci numbers less than or equal to
+    that number
+    
+    :param num: the number to which the fibonacci sequence will be calculated
+    :return: The sum of all even fibonacci numbers less than or equal to num.
+    """
     totalSum = 0
     a = 0
     b = 1
@@ -64,6 +91,12 @@ def sum_even_fibo(num):
 
 
 def sum_even_fibo(num):
+    """
+    It's a fibonacci sequence generator that adds the even numbers to a total sum
+    
+    :param num: the number to which the fibonacci sequence will be calculated
+    :return: The sum of all even fibonacci numbers up to the given number.
+    """
     totalSum = 0
     a = 0
     b = 1
@@ -74,7 +107,7 @@ def sum_even_fibo(num):
             totalSum = totalSum + b
 
         # here is fibo made, this time in an addition way
-        a, b = b, a + b # swap variables
+        a, b = b, a + b  # swap variables
     return totalSum
 
 

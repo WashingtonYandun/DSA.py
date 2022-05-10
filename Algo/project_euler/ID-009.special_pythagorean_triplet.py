@@ -12,6 +12,16 @@ Find the product abc.
 
 
 def pythagorean_triplet(target):
+    """
+    For each value of a, we iterate through all values of b, and then calculate c. 
+    
+    If a, b, and c are a Pythagorean triplet, we return the product of a, b, and c. 
+    
+    If we don't find a Pythagorean triplet, we return an empty array
+    
+    :param target: the sum of the triplet
+    :return: The product of the pythagorean triplet that sums up to 1000
+    """
     tripletArr = []
     for a in range(1, target, 1):
         # this implicates that b is bigger than a: b = a + 1

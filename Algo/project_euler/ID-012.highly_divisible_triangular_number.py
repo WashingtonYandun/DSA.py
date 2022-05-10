@@ -25,10 +25,23 @@ from time import time
 
 
 def natural_sum(n):
+    """
+    It takes a number, n, and returns the sum of the first n natural numbers
+    
+    :param n: The number of natural numbers to sum up
+    :return: The sum of the first n natural numbers.
+    """
     return int(n * (n + 1) / 2)
 
 
 def get_numDivisiors(num):
+    """
+    It counts the number of divisors of a number by checking if the number is divisible by all numbers
+    from 1 to the square root of the number
+    
+    :param num: The number to find the number of divisors of
+    :return: The number of divisors of a number.
+    """
     count = 0
     for i in range(1, int(math.sqrt(num))+1, 1):
         if num % i == 0:
@@ -37,6 +50,13 @@ def get_numDivisiors(num):
 
 
 def highly_divisible_triangular_number(target):
+    """
+    It finds the first triangular number with more than 500 divisors
+    
+    :param target: the number of divisors we want to find
+    :return: The highly divisible triangular number, the number of the triangle, and the time it took to
+    find the answer.
+    """
     # TODO: need to improve this
     t = time()
     numberOfDivisors = 0

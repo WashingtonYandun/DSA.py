@@ -31,10 +31,24 @@ rawSerie = "73167176531330624919225119674426574742355349194934969835203127745063
 
 
 def str_to_numlist(raw):
+    """
+    It takes a string of numbers and returns a list of integers
+    
+    :param raw: the string to be converted to a list of numbers
+    :return: A list of integers.
+    """
     return list(map(lambda c: int(c), list(raw)))
 
 
 def largest_product_in_a_series(arr, digits):
+    """
+    For each possible starting index, multiply the digits in the range of the starting index to the
+    starting index plus the number of digits, and return the largest product
+    
+    :param arr: the array of numbers
+    :param digits: the number of digits to multiply together
+    :return: The largest product of the digits in the array.
+    """
     maxProd = 0
     for i in range(0, len(arr) - digits + 1):
         currentProduct = 1

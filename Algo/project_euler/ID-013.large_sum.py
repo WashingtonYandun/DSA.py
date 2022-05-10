@@ -110,6 +110,13 @@ serie = [
 
 
 def large_sum(serie):
+    """
+    It sums all the elements in the list, casts the result to a string, and returns the first 10
+    characters of the string
+    
+    :param serie: a list of numbers
+    :return: The first 10 digits of the sum of the list
+    """
     serie = sum(serie)  # sum all the elements in the list
     serie = str(serie)  # cast to str in order to access to it with indexes
     return serie[: 10]  # tricky
