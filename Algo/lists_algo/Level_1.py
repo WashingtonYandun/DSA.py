@@ -17,9 +17,13 @@ Note: The generated output will always be 1 if the index that you return is corr
 
 
 def peak_element_trd(arr):
-    '''
-    return a peak element from an array
-    '''
+    """
+    If the current element is greater than the next element and the previous element, then return the
+    current index
+    
+    :param arr: The array to search for a peak element in
+    :return: The index of the peak element.
+    """
     arr.append(0)
     for i in range(0, len(arr)-1):
         if arr[i] > arr[i + 1] and arr[i] > arr[i - 1]:
@@ -29,17 +33,25 @@ def peak_element_trd(arr):
 
 
 def peak_element_ps(arr):
-    '''
-    return a peak element from an array, using max() (Tricky xd)!
-    '''
+    """
+    It returns the index of the maximum element in the array.
+    
+    :param arr: The array to be searched
+    :return: The index of the maximum value in the array.
+    """
     return arr.index(max(arr))
 
 
 def peak_all_element(arr):
-    '''
-    return a list with all the indexes where exist a peak element in the list given,
-    using max() 
-    '''
+    """
+    It takes an array, appends a zero to the end of it, then iterates through the array, checking if the
+    current element is greater than the next and previous elements, and if so, appends the index of the
+    current element to a list of peaks. Finally, it removes the zero from the end of the array and
+    returns the list of peaks
+    
+    :param arr: The array to be searched
+    :return: The index of the peak elements
+    """
     arr.append(0)
     peaks = []
     for i in range(0, len(arr)-1):
@@ -56,12 +68,15 @@ Given an array A of size N of integers. Your task is to find the minimum and max
 
 
 def get_min_max_trd(arr):
-    '''
-    find and return maximun and minimun elements from an array
-    '''
+    """
+    It loops through the array and compares each element to the current minimum and maximum values,
+    updating them if necessary
+    
+    :param arr: the array to be searched
+    :return: The minimum and maximum values of the array.
+    """
     maximun = 0
     minimun = arr[0]
-    # this len(arr) could be replaced for n
     for i in range(len(arr)):
         if arr[i] < minimun:
             minimun = arr[i]
@@ -71,10 +86,12 @@ def get_min_max_trd(arr):
 
 
 def get_min_max_ps(arr):
-    '''
-    find and return maximun and minimun elements from an array,
-    using min() and max()
-    '''
+    """
+    It takes an array of numbers and returns the minimum and maximum values in the array
+    
+    :param arr: The array of numbers to be analyzed
+    :return: The minimum and maximum values of the array.
+    """
     return min(arr), max(arr)
 
 
@@ -85,9 +102,12 @@ You are given a string s. You need to reverse the string.
 
 
 def reverse_word_trd(s):
-    '''
-    return a reverse string or array
-    '''
+    """
+    It takes a string, s, and returns a string that is the reverse of s
+    
+    :param s: the string to be reversed
+    :return: The reversed string
+    """
     sReversed = ""
     for i in range(len(s)-1, -1, -1):
         sReversed = sReversed + s[i]
@@ -95,9 +115,12 @@ def reverse_word_trd(s):
 
 
 def reverse_word_ps(s):
-    '''
-    return a reverse string or array, using "lists"
-    '''
+    """
+    It takes a string, reverses it, and returns the reversed string
+    
+    :param s: The string to be reversed
+    :return: The string s is being returned in reverse order.
+    """
     return s[::-1]
 
 
@@ -108,9 +131,13 @@ Given a random set of numbers, Print them in sorted order.
 
 
 def bubble_sort(arr):
-    '''
-    return a sorted array using bubble sort
-    '''
+    """
+    For each element in the array, compare it to the next element and swap them if the first element is
+    greater than the second element
+    
+    :param arr: the array to sort
+    :return: The sorted array
+    """
     for i in range(0, len(arr)):
         for j in range(i+1, len(arr)):
             if arr[i] > arr[j]:
@@ -120,9 +147,13 @@ def bubble_sort(arr):
 
 
 def sort_list(arr):
-    '''
-    return a sorted array using sorted()
-    '''
+    """
+    It takes a list of numbers as an argument and returns a sorted list of those numbers
+    
+    :param arr: an array of integers
+    :return: The sorted list
+    """
+    #must be done with more algos
     return sorted(arr)
 
 
@@ -135,9 +166,13 @@ It is given that all array elements are distinct.
 
 
 def kth_smallest(arr, k):
-    '''
-    Order the array and return k-1 value of the sorted array
-    '''
+    """
+    It sorts the array and returns the kth element
+    
+    :param arr: an array of integers
+    :param k: the kth smallest element
+    :return: The kth smallest element in the array.
+    """
     # need an optimized solution
     return sorted(arr)[k-1]
 
@@ -150,9 +185,13 @@ The task is to find the frequency of X in vector.
 
 
 def find_frequency_ps(arr, x):
-    '''
-    return the number of times x is in the array
-    '''
+    """
+    It iterates through the array and adds 1 to the xFrecuency variable every time it finds the number x
+    
+    :param arr: The array to search through
+    :param x: The number you want to find the frequency of
+    :return: The number of times that the number x appears in the array arr.
+    """
     xFrecuency = 0
     for i in arr:
         if i == x:
@@ -161,9 +200,13 @@ def find_frequency_ps(arr, x):
 
 
 def find_frequency_trd(arr, x):
-    '''
-    return the number of times x is in the array
-    '''
+    """
+    It iterates through the array and counts the number of times the value x appears in the array
+    
+    :param arr: The array to search in
+    :param x: The number you want to find the frequency of
+    :return: The number of times that the number x appears in the array.
+    """
     xFrecuency = 0
     for i in range(0, len(arr)):
         if arr[i] == x:
@@ -178,9 +221,12 @@ Given an array of size N containing only 0s, 1s, and 2s; sort the array in ascen
 
 
 def sort012(arr):
-    '''
-    return a sorted array containing 0,1,2 (useless)
-    '''
+    """
+    It sorts the array and returns the sorted array
+    
+    :param arr: an array of integers
+    :return: None
+    """
     arr = arr.sort()
     return arr
 
@@ -193,9 +239,15 @@ find a continuous sub-array which adds to a given number S.
 
 
 def sub_array_sum_tle(arr, s):
-    '''
-    return a subarray with the given sum
-    '''
+    """
+    For each element in the array, we add it to the sum and check if the sum is equal to the given sum.
+    If it is, we return the indices. If it is greater than the given sum, we break out of the loop. If
+    it is less than the given sum, we keep adding the next element to the sum
+    
+    :param arr: The array to search through
+    :param s: the sum we're looking for
+    :return: The start and end index of the subarray that sums to the given sum.
+    """
     for i in range(len(arr)):
         cs = arr[i]
         j = i + 1
@@ -210,9 +262,17 @@ def sub_array_sum_tle(arr, s):
 
 
 def sub_aray_sum(arr, n, s):
-    '''
-    return a subarray with the given sum
-    '''
+    """
+    It starts with the first element of the array and keeps adding elements to the current sum until the
+    current sum becomes equal to the sum s or it becomes greater than s. If the current sum becomes
+    equal to s, then we return true and if the current sum becomes greater than s, then we remove
+    trailing elements while the current sum is greater than s
+    
+    :param arr: The array to be searched
+    :param n: length of the array
+    :param s: the sum we're looking for
+    :return: The start and end index of the subarray that sums to the given sum.
+    """
     i = 0
     cs = arr[0]
     j = 1
@@ -241,9 +301,12 @@ The task is place all negative element at the end of array without changing the 
 
 
 def segregate_elements(arr):
-    '''
-    put all the negative elements of the array to the end
-    '''
+    """
+    It segregates the negative numbers from the positive numbers in an array.
+    
+    :param arr: The array to be sorted
+    :return: the array with the positive numbers first and the negative numbers second.
+    """
     nArr = []
     pArr = []
     for i in arr:
@@ -265,9 +328,14 @@ If there are repetitions, then only one occurrence of element should be printed 
 
 
 def union(a, b):
-    '''
-    return the lengths of the union of two arrays
-    '''
+    """
+    It takes two lists, and returns the length of the longer list, with the shorter list appended to the
+    end of the longer list
+    
+    :param a: list of integers
+    :param b: list of integers
+    :return: The length of the longer list.
+    """
     if len(a) > len(b):
         for i in b:
             if i not in a:
@@ -281,9 +349,14 @@ def union(a, b):
 
 
 def union_ps(a, b):
-    '''
-    return the lengths of the union of two arrays using sets set()
-    '''
+    """
+    It takes two lists, adds them together, converts the result to a set, and returns the length of the
+    set
+    
+    :param a: list of integers
+    :param b: the number of times the word appears in the corpus
+    :return: The length of the set of the union of the two lists.
+    """
     c = a + b
     c = set(c)
     return len(c)
