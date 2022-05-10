@@ -5,9 +5,17 @@ Write a function to find the longest common prefix string amongst an array of st
 If there is no common prefix, return an empty string "".
 '''
 
-
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
+        """
+        We iterate through the first string and compare the character at the current position to the
+        character at the same position in all other strings. If they are all the same, we add the
+        character to the result string. If they are not the same, we return the result string.
+        
+        :param strs: List[str] -> the list of strings to compare
+        :type strs: List[str]
+        :return: The longest common prefix
+        """
         commonPref = ""
         minimumLength = len(strs[0])  # temp shortest
 

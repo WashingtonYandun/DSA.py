@@ -10,6 +10,13 @@ Open brackets must be closed in the correct order.
 
 class Solution:
     def isValid(self, s: str) -> bool:
+        """
+        If the string is valid, then the stack should be empty at the end.
+        
+        :param s: str
+        :type s: str
+        :return: True or False
+        """
         lefts = []
 
         for i in s:

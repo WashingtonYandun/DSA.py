@@ -6,9 +6,14 @@ import sys
 
 
 def sum_of_two(arr, value):
-    '''
-    return a boolean value if exist a pair with the given sum.
-    '''
+    """
+    For each element in the array, check if the difference between the value and the element is in the
+    array
+    
+    :param arr: an array of integers
+    :param value: the value we're looking for
+    :return: True or False
+    """
     for i in arr:
         diff = value - i
         if diff in arr:
@@ -17,9 +22,14 @@ def sum_of_two(arr, value):
 
 
 def sum_of_two_all(arr, value):
-    '''
-    return a dict of all the matches of pairs with the sum given
-    '''
+    """
+    It loops through the array, and for each element, it loops through the array again, and if the sum
+    of the two elements is equal to the value, it adds the pair to the dictionary
+    
+    :param arr: an array of integers
+    :param value: the sum of the two numbers
+    :return: A dictionary with the number of pairs and the pairs themselves.
+    """
     cont = 0
     pairs = {"Pairs": cont}
 
@@ -35,9 +45,13 @@ def sum_of_two_all(arr, value):
 
 
 def fibo_rc(num):
-    '''
-    recursive fibonacci
-    '''
+    """
+    If the number is 0, return 0. If the number is 1, return 1. Otherwise, return the sum of the
+    previous two numbers
+    
+    :param num: The number of the Fibonacci sequence you want to find
+    :return: the sum of the two previous numbers in the sequence.
+    """
     if num == 0:
         return 0
     elif num == 1:
@@ -47,9 +61,14 @@ def fibo_rc(num):
 
 
 def fibo_m(num, memory={0: 0, 1: 1, 2: 1, 3: 2}):
-    '''
-    dynamic programming fibonacci
-    '''
+    """
+    If the number is in the memory, return it. Otherwise, calculate the number and store it in the
+    memory
+    
+    :param num: The number of the Fibonacci sequence you want to find
+    :param memory: a dictionary that stores the values of the fibonacci sequence
+    :return: The nth number in the Fibonacci sequence.
+    """
     if num in memory:
         return memory[num]
     memory[num] = fibo_m(num - 1) + fibo_m(num - 2)
@@ -57,9 +76,13 @@ def fibo_m(num, memory={0: 0, 1: 1, 2: 1, 3: 2}):
 
 
 def fact_rc(num):
-    '''
-    recursive factorial
-    '''
+    """
+    If the number is 0 or 1, return 1. Otherwise, return the number multiplied by the factorial of the
+    number minus 1
+    
+    :param num: The number to calculate the factorial of
+    :return: The factorial of the number.
+    """
     if num == 0 or num == 1:
         return 1
     else:
@@ -67,9 +90,15 @@ def fact_rc(num):
 
 
 def fact_m(num, memory={0: 1, 1: 1, 2: 2}):
-    '''
-    dynamic programming factorial
-    '''
+    """
+    If the number is in the memory, return it. Otherwise, calculate the factorial and store it in the
+    memory
+    
+    :param num: The number to calculate the factorial of
+    :param memory: a dictionary that will store the results of the factorials that have already been
+    calculated
+    :return: The factorial of the number.
+    """
     if num in memory:
         return memory[num]
     memory[num] = num*fact_m(num - 1)
@@ -77,9 +106,13 @@ def fact_m(num, memory={0: 1, 1: 1, 2: 2}):
 
 
 def is_odd(n):
-    '''
-    verify if anumber is odd or not
-    '''
+    # must be improved
+    """
+    If the number of divisors of a number is greater than 2, then it is not prime
+    
+    :param n: the number to be checked
+    :return: True or False
+    """
     flag = True
     cont = 0
     for i in range(1, n+1):
@@ -91,18 +124,26 @@ def is_odd(n):
 
 
 def is_even(n):
-    '''
-    verify if anumber is even or not
-    '''
+    """
+    If n is even, return True, otherwise return False
+    
+    :param n: The number to check
+    :return: True or False
+    """
     if n % 2 == 0:
         return True
     return False
 
 
 def partition(arr, k):
-    '''
-    return an array of sub arrays in a defined lengths
-    '''
+    """
+    It takes an array and a number k, and returns an array of arrays, each of which is a subarray of the
+    original array, and each of which has a length of k
+    
+    :param arr: the array to be partitioned
+    :param k: the number of elements in each sublist
+    :return: A list of lists.
+    """
     subs = []
     for i in range(0, len(arr), k):
         s = [arr[i:i + k]]

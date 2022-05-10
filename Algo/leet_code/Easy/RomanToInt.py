@@ -15,6 +15,15 @@ Given a roman numeral, convert it to an integer.
 
 class Solution:
     def romanToInt(self, s: str) -> int:
+        """
+        We iterate through the string, and if the current character and the next character form a key in
+        our dictionary, we add the corresponding value to our total. Otherwise, we just add the value of
+        the current character.
+        
+        :param s: str
+        :type s: str
+        :return: The number of the roman numeral
+        """
         n = len(s)
         romanNums = {
             "I": 1,

@@ -9,9 +9,13 @@ You can return the answer in any order.
 
 class Solution:
     def twoSumN2(nums, target):
-        '''
-        return a pair with that mathces the given sum, O(n**2) solution
-        '''
+        """
+        For each element in the list, check if there is another element that sums to the target
+        
+        :param nums: the list of numbers
+        :param target: the sum we're looking for
+        :return: The indices of the two numbers that add up to the target.
+        """
         n = len(nums)
         for i in range(0, n):
             j = i + 1
@@ -21,9 +25,14 @@ class Solution:
 
 
 def twoSumN(nums, target):
-    '''
-    return a pair with that mathces the given sum, O(n) solution
-    '''
+    """
+    For each number in the list, we check if the difference between the target and the current number is
+    in the dictionary. If it is, we return the difference and the current number. If it isn't, we add
+    the current number to the dictionary
+    
+    :param nums: the list of numbers
+    :param target: the target sum
+    """
     differences = {}
     n = len(nums)
     for i in range(0, n):
