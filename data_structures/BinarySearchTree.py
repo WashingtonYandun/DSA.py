@@ -1,6 +1,6 @@
+# TODO: SOLVE METHODS BUGS
 class BstNode:
-
-    data = 0
+    data = None
     left = None
     right = None
 
@@ -49,7 +49,8 @@ class BinarySearchTree:
 
 
 btree = BinarySearchTree(10)
-for i in range(0, 5):
+
+for i in range(0, 10):
     btree.insert(btree.root, i)
 
 btree.traverse_preorder(btree.root)
