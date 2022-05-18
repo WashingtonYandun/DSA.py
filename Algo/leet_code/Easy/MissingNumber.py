@@ -20,7 +20,7 @@ class Solution:
     
     # 136 ms, faster than 91.50%
     # 15.1 MB, less than 77.79%
-    def missingNumber(self, nums: List[int]) -> int:
+    def missingNumberMath(self, nums: List[int]) -> int:
         n = len(nums)
         real = n*(n+1)/2
         return int(real - sum(nums))

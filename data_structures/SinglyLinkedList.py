@@ -1,5 +1,5 @@
 class SllNode:
-    def __init__(self, data=0, next=None):
+    def __init__(self, data=None, next=None):
         self.data = data
         self.next = next
 
@@ -13,8 +13,7 @@ class SinglyLinkedList:
 
     def length(self):
         if self.head is None:
-            print("Just the head")
-            return 1
+            return 0
         aux = self.head
         long = 0
         while aux is not None:

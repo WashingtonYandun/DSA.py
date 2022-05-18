@@ -1,4 +1,3 @@
-'''
 from data_structures.DoublyLinkedList import DoublyLinkedList
 from data_structures.SinglyLinkedList import SinglyLinkedList
 
@@ -11,8 +10,3 @@ for i in range(10, 21, 1):
 
 dll.insert_at(200, 8)
 dll.show()
-'''
-
-# iplement sorting algorithms
-# bubble sort
-# i
