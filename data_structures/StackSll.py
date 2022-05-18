@@ -4,8 +4,8 @@ from data_structures.SinglyLinkedList import SinglyLinkedList
 class StackSll:
     stk = None
 
-    def __init__(self):
-        self.stk = SinglyLinkedList()
+    def __init__(self, data):
+        self.stk = SinglyLinkedList(data)
         pass
 
     def push(self, data):

@@ -4,8 +4,8 @@ from data_structures.SinglyLinkedList import SinglyLinkedList
 class QueueSll:
     queue = None
 
-    def __init__(self):
-        self.queue = SinglyLinkedList()
+    def __init__(self, data):
+        self.queue = SinglyLinkedList(data)
         pass
 
     def add(self, new_data):

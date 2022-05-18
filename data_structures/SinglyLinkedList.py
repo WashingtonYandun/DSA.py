@@ -1,21 +1,25 @@
 class SllNode:
-    def __init__(self, data=None, next=None):
+    data = None
+    next = None
+    
+    def __init__(self, data):
         self.data = data
-        self.next = next
+        self.next = None
 
 
 class SinglyLinkedList:
     head = None
 
-    def __init__(self, head=None):
-        self.head = head
-        self.head = None
+    def __init__(self, data):
+        self.head = SllNode(data)
 
     def length(self):
         if self.head is None:
             return 0
+
         aux = self.head
         long = 0
+        
         while aux is not None:
             long += 1
             aux = aux.next
