@@ -62,3 +62,7 @@ from the Stack.
 
 -   Based on python built in Lists
 -   Based on Singly Linked List class. (Built by my own)
+
+---
+
+made by: [Washington Yandun](https://github.com/WashingtonYandun)
