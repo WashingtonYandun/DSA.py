@@ -37,7 +37,7 @@ Circular linked list is a Singly Linked List (Sll) where all nodes are connected
 
 # Doubly Circular Linked List
 
-Doubly Circular Linked List (Dcll) is a Doubly Linked List (Dll) where all nodes are connected to form a circle. **The las element points to the head itsand the head points to the last with its extra pointer (prev)** . There is no NULL at the end or the begining.
+Doubly Circular Linked List (Dcll) is a Doubly Linked List (Dll) where all nodes are connected to form a circle. **The last element points to the head itsand the head points to the last with its extra pointer (prev)** . There is no NULL at the end or the begining.
 
 ### My Implementations:
 
