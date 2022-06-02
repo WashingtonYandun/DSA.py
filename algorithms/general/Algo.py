@@ -9,7 +9,7 @@ def sum_of_two(arr, value):
     """
     For each element in the array, check if the difference between the value and the element is in the
     array
-    
+
     :param arr: an array of integers
     :param value: the value we're looking for
     :return: True or False
@@ -25,7 +25,7 @@ def sum_of_two_all(arr, value):
     """
     It loops through the array, and for each element, it loops through the array again, and if the sum
     of the two elements is equal to the value, it adds the pair to the dictionary
-    
+
     :param arr: an array of integers
     :param value: the sum of the two numbers
     :return: A dictionary with the number of pairs and the pairs themselves.
@@ -48,7 +48,7 @@ def fibo_rc(num):
     """
     If the number is 0, return 0. If the number is 1, return 1. Otherwise, return the sum of the
     previous two numbers
-    
+
     :param num: The number of the Fibonacci sequence you want to find
     :return: the sum of the two previous numbers in the sequence.
     """
@@ -64,7 +64,7 @@ def fibo_m(num, memory={0: 0, 1: 1, 2: 1, 3: 2}):
     """
     If the number is in the memory, return it. Otherwise, calculate the number and store it in the
     memory
-    
+
     :param num: The number of the Fibonacci sequence you want to find
     :param memory: a dictionary that stores the values of the fibonacci sequence
     :return: The nth number in the Fibonacci sequence.
@@ -79,7 +79,7 @@ def fact_rc(num):
     """
     If the number is 0 or 1, return 1. Otherwise, return the number multiplied by the factorial of the
     number minus 1
-    
+
     :param num: The number to calculate the factorial of
     :return: The factorial of the number.
     """
@@ -93,7 +93,7 @@ def fact_m(num, memory={0: 1, 1: 1, 2: 2}):
     """
     If the number is in the memory, return it. Otherwise, calculate the factorial and store it in the
     memory
-    
+
     :param num: The number to calculate the factorial of
     :param memory: a dictionary that will store the results of the factorials that have already been
     calculated
@@ -109,7 +109,7 @@ def is_odd(n):
     # must be improved
     """
     If the number of divisors of a number is greater than 2, then it is not prime
-    
+
     :param n: the number to be checked
     :return: True or False
     """
@@ -126,7 +126,7 @@ def is_odd(n):
 def is_even(n):
     """
     If n is even, return True, otherwise return False
-    
+
     :param n: The number to check
     :return: True or False
     """
@@ -139,7 +139,7 @@ def partition(arr, k):
     """
     It takes an array and a number k, and returns an array of arrays, each of which is a subarray of the
     original array, and each of which has a length of k
-    
+
     :param arr: the array to be partitioned
     :param k: the number of elements in each sublist
     :return: A list of lists.
@@ -149,3 +149,19 @@ def partition(arr, k):
         s = [arr[i:i + k]]
         subs.append(s)
     return subs
+
+
+digits = {
+    1000: 'M',
+    900: 'CM',
+    500: 'D',
+    400: 'CD',
+    100: 'C',
+    90: 'XC',
+    50: 'L',
+    40: 'XL',
+    10: 'X',
+    9: 'IX',
+    5: 'V',
+    4: 'IV',
+    1: 'I'}
