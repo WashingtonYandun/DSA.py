@@ -8,8 +8,8 @@ Note: The way that the robot is "facing" is irrelevant. 'R' will always make the
 
 
 class Solution:
-    # 82 ms, faster than 42.15%
-    # 14.1 MB, less than 89.80%
+    # 59 ms, faster than 75.60%
+    # 14 MB, less than 88.64% 
     def judgeCircle(self, moves: str) -> bool:
         x = 0
         y = 0
