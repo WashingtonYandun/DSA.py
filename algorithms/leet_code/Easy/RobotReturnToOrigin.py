@@ -17,12 +17,16 @@ class Solution:
         for i in moves:
             if i == "U":
                 y = y + 1
+                pass
             elif i == "D":
                 y = y - 1
+                pass
             elif i == "R":
                 x = x + 1
+                pass
             elif i == "L":
                 x = x - 1
+                pass
             else:
                 break
 
