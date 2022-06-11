@@ -10,10 +10,10 @@ Note: The way that the robot is "facing" is irrelevant. 'R' will always make the
 class Solution:
     # 59 ms, faster than 75.60%
     # 14 MB, less than 88.64% 
-    def judgeCircle(self, moves: str) -> bool:
+    def judgeCircle(self, moves: str) -> bool:        
         x = 0
         y = 0
-
+        
         for i in moves:
             if i == "U":
                 y = y + 1
@@ -29,5 +29,7 @@ class Solution:
                 pass
             else:
                 break
-
+            
+        
         return x == 0 and y == 0
+        
