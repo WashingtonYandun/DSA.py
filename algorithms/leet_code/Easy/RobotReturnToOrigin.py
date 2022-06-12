@@ -8,22 +8,28 @@ Note: The way that the robot is "facing" is irrelevant. 'R' will always make the
 
 
 class Solution:
-    # 82 ms, faster than 42.15%
-    # 14.1 MB, less than 89.80%
-    def judgeCircle(self, moves: str) -> bool:
+    # 59 ms, faster than 75.60%
+    # 14 MB, less than 88.64% 
+    def judgeCircle(self, moves: str) -> bool:        
         x = 0
         y = 0
-
+        
         for i in moves:
             if i == "U":
                 y = y + 1
+                pass
             elif i == "D":
                 y = y - 1
+                pass
             elif i == "R":
                 x = x + 1
+                pass
             elif i == "L":
                 x = x - 1
+                pass
             else:
                 break
-
+            
+        
         return x == 0 and y == 0
+        
