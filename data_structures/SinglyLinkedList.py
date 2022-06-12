@@ -1,7 +1,10 @@
+from operator import length_hint
+
+
 class SllNode:
     data = None
     next = None
-    
+
     def __init__(self, data):
         self.data = data
         self.next = None
@@ -14,16 +17,16 @@ class SinglyLinkedList:
         self.head = SllNode(data)
 
     def length(self):
+        length_counter = 0
         if self.head is None:
-            return 0
+            return length_counter
 
         aux = self.head
-        long = 0
-        
+
         while aux is not None:
-            long += 1
+            length_counter = length_counter + 1
             aux = aux.next
-        return long
+        return length_counter
 
     def push(self, new_data):
         new_node = SllNode(new_data)
