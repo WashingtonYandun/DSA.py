@@ -1,9 +1,11 @@
 # DSA.py
 
+- Just pure python nothing more.
+
 DSA In python-Implementations
 
--   Linked list
--   Stack
+-   Linked lists
+-   Stacks
 -   Queues
 -   Graphs
 -   Trees
@@ -28,8 +30,7 @@ A Doubly Linked List (DLL) based on the Singly Linked List contains an extra poi
 
 # Circular Linked List
 
-Circular linked list is a Singly Linked List (Sll) where all nodes are connected to form a circle.
-**The las element points to the head** . There is no NULL at the end.
+Circular linked list is a Singly Linked List (Sll) where all nodes are connected to form a circle. **The las element points to the head** . There is no NULL at the end.
 
 ### My Implementations:
 
@@ -37,7 +38,7 @@ Circular linked list is a Singly Linked List (Sll) where all nodes are connected
 
 # Doubly Circular Linked List
 
-Doubly Circular Linked List (Dcll) is a Doubly Linked List (Dll) where all nodes are connected to form a circle. **The last element points to the head itsand the head points to the last with its extra pointer (prev)** . There is no NULL at the end or the begining.
+Doubly Circular Linked List (Dcll) is a Doubly Linked List (Dll) where all nodes are connected to form a circle. **The last element points to the head itsand the head points to the last with its extra pointer (prev)**. There is no NULL at the end or the begining.
 
 ### My Implementations:
 
@@ -45,9 +46,7 @@ Doubly Circular Linked List (Dcll) is a Doubly Linked List (Dll) where all nodes
 
 # Stack
 
-This one is a linear data structure that is based on **Last-In-First-Out (LIFO)**.
-The **Stack** rule. In wich each new element that are going to be inserted is placed on the top of the Stack and if we want to delete a element the top element (Last in) is removed
-from the Stack.
+This one is a linear data structure that is based on **Last-In-First-Out (LIFO)**. The **Stack** rule. In wich each new element that are going to be inserted is placed on the top of the Stack and if we want to delete a element the top element (Last in) is removed from the Stack.
 
 ### My Implementations:
 
@@ -65,4 +64,4 @@ from the Stack.
 
 ---
 
-made by: [Washington Yandun](https://github.com/WashingtonYandun)
+Made by: [Washington Yandun](https://washingtonyandun.github.io/wy-portfolio/)
