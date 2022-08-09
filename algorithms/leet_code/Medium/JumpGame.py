@@ -6,13 +6,13 @@ Return true if you can reach the last index, or false otherwise.
 
 
 class Solution:
-    # 107 ms, faster than 89.72%
-    # 15.1 MB, less than 96.82%
+    # 507 ms, faster than 91.88%
+    # 15.1 MB, less than 82.24%
     def canJump(self, nums: List[int]) -> bool:
         # nums[pos] => jums
         # we have to reach 0 index so in python we use one minus number in this case
         target_pos = len(nums) - 1
-        for pos in range(target_pos, -1, -1):
+        for pos in range(target_pos - 1, -1, -1):
             if pos + nums[pos] >= target_pos:
                 target_pos = pos
 
