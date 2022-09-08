@@ -14,15 +14,17 @@
 
 ---
 
-## Leetcode
+> ## Leetcode
 
 Leetcode solutions and the efficientcy of my solutions
 
-## Project Euler
+> ## Project Euler
 
 Solutions to the project euler problems
 
 ---
+
+## DATA STRUCTURES
 
 ### Linked List
 
