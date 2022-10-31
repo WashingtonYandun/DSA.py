@@ -1,6 +1,6 @@
 # DSA.py
 
-> Just pure python nothing more.
+> Just pure python. 
 
 ---
 
