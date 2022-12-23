@@ -1,56 +1,44 @@
-# TODO: SOLVE METHODS BUGS
-class BstNode:
-    data = None
-    left = None
-    right = None
+class TNode:
+    def __init__(self, val, children=None):
+        self.val = val
+        self.children = children or []
 
-    def __init__(self, data):
-        self.data = data
-        self.left = None
-        self.right = None
+    def __repr__(self):
+        return f"Node({self.val})"
 
+    def add_child(self, val):
+        self.children.append(Node(val))
 
-class BinarySearchTree:
+    def depth(self):
+        if not self.parent:
+            return 0
+        return self.parent.depth() + 1
 
-    root = None
+    def height(self):
+        if not self.children:
+            return 0
+        return 1 + max(child.height() for child in self.children)
 
-    def __init__(self, data):
-        self.root = BstNode(data)
+    def size(self):
+        return 1 + sum(child.size() for child in self.children)
 
-    def insert(self, node, data):
-        if data < node.data:
-            if node.left is not None:
-                self.insert(node.left, data)
-            else:
-                node.left = BstNode(data)
-        else:
-            if node.right is not None:
-                self.insert(node.right, data)
-            else:
-                node.left = BstNode(data)
+    def preorder_traversal(self):
+        traversal = [self.val]
+        for child in self.children:
+            traversal.extend(child.preorder_traversal())
+        return traversal
 
-    def traverse_preorder(self, node):
-        if node is not None:
-            print(node.data, end="\n")
-            self.traverse_preorder(node.left)
-            self.traverse_preorder(node.right)
+    def inorder_traversal(self):
+        traversal = []
+        for child in self.children[:len(self.children) // 2]:
+            traversal.extend(child.inorder_traversal())
+        traversal.append(self.val)
+        for child in self.children[len(self.children) // 2:]:
+            traversal.extend(child.inorder_traversal())
+        return traversal
 
-    def traverse_inorder(self, node):
-        if node is not None:
-            self.traverse_inorder(node.left)
-            print(node.data, end="\n")
-            self.traverse_inorder(node.right)
-
-    def traverse_postorder(self, node):
-        if node is not None:
-            self.traverse_preorder(node.left)
-            self.traverse_preorder(node.right)
-            print(node.data, end="\n")
-
-
-btree = BinarySearchTree(10)
-
-for i in range(0, 10):
-    btree.insert(btree.root, i)
-
-btree.traverse_preorder(btree.root)
+    def postorder_traversal(self):
+        traversal = []
+        for child in self.children:
+            traversal.extend(child.postorder_traversal())
+        traversal.append(self.val)
