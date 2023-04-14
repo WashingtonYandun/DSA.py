@@ -1,4 +1,10 @@
-/* Write your T-SQL query statement below */
+-- 181. Employees Earning More Than Their Managers
+
+/*
+Write an SQL query to find the employees who earn more than their managers.
+Return the result table in any order.
+The query result format is in the following example.
+*/
 
 -- 727 ms, faster than 25.93%
 
