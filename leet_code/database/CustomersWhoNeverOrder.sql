@@ -15,4 +15,4 @@ FROM
 LEFT JOIN
     Orders O ON C.id = O.customerId
 where
-    O.customerId is null
+    O.customerId IS NULL
