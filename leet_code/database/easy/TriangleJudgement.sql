@@ -20,4 +20,4 @@ SELECT
             'Yes'
     END triangle 
 FROM
-    Triangle T;
+    Triangle T
