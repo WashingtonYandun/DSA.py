@@ -4,16 +4,6 @@
 
 ---
 
-## DSA In python-Implementations
-
-- Linked lists
-- Stacks
-- Queues
-- Graphs
-- Trees
-
----
-
 ## Leetcode
 
 Leetcode solutions and the efficientcy of my solutions
