@@ -15,5 +15,5 @@ class Solution:
             else:
                 frec[i] = 1
                 
-        sor = sorted(frec.keys(), key=lambda x: frec[x], reverse=True)[:k]
+        sor = sorted(frec.keys(), key=lambda x: frec[x], reverse=True)
         return sor[:k]
