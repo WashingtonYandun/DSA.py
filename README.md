@@ -11,4 +11,5 @@ This section includes my solutions to LeetCode problems. For each problem, I str
 In this section, you can find my solutions to the Project Euler problems. Project Euler offers a series of challenging mathematical and computational problems.
 
 > **Warning**
-> The naming of the variables and functions may not follow a good standar, i named as I comfortable to solve the problems
+> The naming of the variables and functions may not follow a good standard.
+> I named them as I consider more comfortable to solve the problems
