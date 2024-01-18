@@ -5,38 +5,25 @@ Given the head of a singly linked list, return true if it is a palindrome.
 
 
 # Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+
 class Solution:
-    # 1059 ms, faster than 43.87%
-    # 44.6 MB, less than 65.43%
-    # must be improved => Could i do it in O(n) time and O(1) space?
+    # 371ms, Beats 61.92%
+    # 28.24MB, Beats 53.54%
     def isPalindrome(self, head: Optional[ListNode]) -> bool:
-        initialState = []
-        reversedState = []
-        aux = head
-        while aux is not None:
-            initialState.append(str(aux.val))
-            aux = aux.next
+        temp = head
 
-        current = head
-        prev = None
+        word = ""
 
-        while current is not None:
-            next = current.next
-            current.next = prev
-            prev = current
-            current = next
-        head = prev
+        while temp is not None:
+            word += str(temp.val)
+            temp = temp.next
 
-        aux = head
-        while aux is not None:
-            reversedState.append(str(aux.val))
-            aux = aux.next
-
-        if initialState == reversedState:
+        if word == word[::-1]:
             return True
 
         return False
