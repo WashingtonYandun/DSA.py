@@ -1,15 +1,39 @@
-# DSA.py - Competitive Programming and LeetCode Solutions
+# DSA.py - LeetCode Solutions
 
-This repository contains my solutions to various competitive programming problems and LeetCode challenges, all implemented in pure Python or SQL (Depends on the category)
+This repository contains my solutions to various competitive programming problems and LeetCode challenges, all implemented in pure Python, SQL or Pandas (Depends on the category)
+
+> [!IMPORTANT]
+> The naming of the variables and functions may not follow a good standard.
+> I named them as I consider more comfortable to solve the problems
 
 ## LeetCode
 
 This section includes my solutions to LeetCode problems. For each problem, I strive to provide not only the solution but also an the result of its efficiency and complexity.
 
-## Project Euler
+## Folder Structure
 
-In this section, you can find my solutions to the Project Euler problems. Project Euler offers a series of challenging mathematical and computational problems.
+The repository is structured as follows:
 
-> [!IMPORTANT]
-> The naming of the variables and functions may not follow a good standard.
-> I named them as I consider more comfortable to solve the problems
+```plaintext
+.
+├── <category>
+│   ├── Easy
+│   │   ├── NameOfTheProblemWithoutNumber_A.py
+│   │   ├── NameOfTheProblemWithoutNumber_B.py
+│   │   ├── ...
+│   ├── Medium
+│   │   ├── NameOfTheProblemWithoutNumber_A.py
+│   │   ├── NameOfTheProblemWithoutNumber_B.py
+│   │   ├── ...
+│   ├── Hard
+│   │   ├── NameOfTheProblemWithoutNumber_A.py
+│   │   ├── NameOfTheProblemWithoutNumber_B.py
+│   │   ├── ...
+```
+
+The `category` folder contains subfolders for each difficulty level. Each subfolder contains the solutions to the problems of that difficulty level.
+In this repo you will find the following categories:
+
+-   Algorithms
+-   Database
+-   Pandas
