@@ -18,7 +18,7 @@ class Solution:
     def threeSumClosest(self, nums: List[int], target: int) -> int:
         closest = math.inf
         nums.sort() # to pointers aproach
-        n = len(nums) # for not repeating this calculation each time
+        n = len(nums)
 
         for i in range(n - 2):
             l =  i + 1
